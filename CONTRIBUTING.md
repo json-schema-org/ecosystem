@@ -2,7 +2,7 @@
 
 ## Issues
 
-Issues should identify an problem, enhancement, or use case; and propose some course of action. For alternate support channels, our [support document](https://github.com/json-schema-org/.github/blob/main/SUPPORT.md).
+Issues should identify an problem, enhancement, or use case; and propose some course of action. For alternate support channels, see our [support document](https://github.com/json-schema-org/.github/blob/main/SUPPORT.md).
 
 ## Pull requests
 
