@@ -2,7 +2,7 @@
 
 ## Issues
 
-Issues should identify an problem, enhancement, or use case; and propose some course of action. For alternate support channels, [see the json-schema.org website](http://json-schema.org/) or the [jsonschema tag on stackoverflow](https://stackoverflow.com/tags/jsonschema).
+Issues should identify an problem, enhancement, or use case; and propose some course of action. For alternate support channels, our [support document](https://github.com/json-schema-org/.github/blob/main/SUPPORT.md).
 
 ## Pull requests
 
