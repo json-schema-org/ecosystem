@@ -1,7 +1,8 @@
 import { Octokit } from 'octokit';
 import cheerio from 'cheerio';
-import fs from 'fs';
 import { getInput } from './setup.js';
+
+import { DataRecorder } from './dataRecorder.js';
 
 const WAYBACK_API_URL = 'http://archive.org/wayback/available';
 const CSV_FILE_NAME = `initialTopicRepoData-${Date.now()}.csv`;
@@ -15,8 +16,17 @@ async function fetchRepoCreationDate(octokit, owner, repo) {
   return response.data.created_at;
 }
 
-async function fetchLatestReleaseDate(octokit, owner, repo) {
-  console.log(`Fetching latest release date for repository: ${owner}/${repo}`);
+async function fetchRepoTopics(octokit, owner, repo) {
+  console.log(`Fetching topics for repository: ${owner}/${repo}`);
+  const response = await octokit.request('GET /repos/{owner}/{repo}/topics', {
+    owner,
+    repo,
+  });
+  return response.data.names;
+}
+
+async function fetchFirstReleaseDate(octokit, owner, repo) {
+  console.log(`Fetching first release date for repository: ${owner}/${repo}`);
   const response = await octokit.request('GET /repos/{owner}/{repo}/releases', {
     owner,
     repo,
@@ -56,23 +66,25 @@ async function checkTopicInPage(url, topic) {
   return $(`a.topic-tag-link:contains('${topic}')`).length > 0;
 }
 
-function appendToCSV(data) {
-  console.log(`Appending data to CSV: ${data}`);
-  const csvLine = `${data.join(',')}\n`;
-  fs.appendFileSync(CSV_FILE_NAME, csvLine, 'utf8');
-}
-
 async function processRepository(octokit, owner, repo, topic) {
   console.log(`Processing repository: ${owner}/${repo}`);
   const githubRepoURL = `https://github.com/${owner}/${repo}`;
 
   const creationDate = await fetchRepoCreationDate(octokit, owner, repo);
-  const latestReleaseDate = await fetchLatestReleaseDate(octokit, owner, repo);
+  const firstReleaseDate = await fetchFirstReleaseDate(octokit, owner, repo);
+  const repoTopics = await fetchRepoTopics(octokit, owner, repo);
+  console.log({ firstReleaseDate });
+  if (firstReleaseDate === null) {
+    console.log(`First release date: of ${githubRepoURL} unknown`);
+  }
 
-  for (const [dateType, isoDate] of [
+  const dateTypes = [
     ['creation', creationDate],
-    ['release', latestReleaseDate],
-  ]) {
+    ...(firstReleaseDate !== null ? [['release', firstReleaseDate]] : []),
+  ];
+  console.log({ dateTypes });
+
+  const dataSets = dateTypes.map(async ([dateType, isoDate]) => {
     if (isoDate) {
       console.log(`Processing ${dateType} date: ${isoDate}`);
       const date = new Date(isoDate);
@@ -87,14 +99,11 @@ async function processRepository(octokit, owner, repo, topic) {
         const archiveUrl = archivedSnapshots.closest.url;
         if (archiveUrl) {
           const topicExists = await checkTopicInPage(archiveUrl, topic);
-          const data = [
-            `${owner}/${repo}`,
-            dateType,
-            datestamp,
-            archiveUrl,
-            topicExists,
-          ];
-          appendToCSV(data);
+          return {
+            [`datestamp_${dateType}`]: datestamp,
+            [`archiveUrl_${dateType}`]: archiveUrl,
+            [`topicExists_${dateType}`]: topicExists,
+          };
         } else {
           console.error(
             `Couldn't get closest archive URL given response from ${githubRepoURL}`,
@@ -102,33 +111,47 @@ async function processRepository(octokit, owner, repo, topic) {
         }
       }
     }
-  }
+  });
+
+  const combinedData = await Promise.all(dataSets);
+
+  const singleRowData = combinedData.reduce(
+    (acc, cur) => {
+      if (cur) {
+        return { ...acc, ...cur };
+      }
+      return acc;
+    },
+    { repository: `${owner}/${repo}`, repoTopics: `"${repoTopics.join(',')}"` },
+  );
+
+  return singleRowData;
 }
 
 async function main(token, topic, numRepos) {
   const octokit = new Octokit({ auth: token });
-
-  if (!fs.existsSync(CSV_FILE_NAME)) {
-    fs.writeFileSync(
-      CSV_FILE_NAME,
-      'repo,date_type,datestamp,snapshot_datestamp,topic_present\n',
-      'utf8',
-    );
-  }
 
   const iterator = octokit.paginate.iterator(octokit.rest.search.repos, {
     q: `topic:${topic}`,
     per_page: 100,
   });
   console.log(iterator);
-
   let processedRepos = 0;
+
+  const dataRecorder = new DataRecorder(CSV_FILE_NAME);
 
   for await (const iteration of iterator) {
     const data = iteration.data;
     for (const repo of data) {
       if (numRepos !== -1 && processedRepos >= numRepos) break;
-      await processRepository(octokit, repo.owner.login, repo.name, topic);
+      const dataRow = await processRepository(
+        octokit,
+        repo.owner.login,
+        repo.name,
+        topic,
+      );
+      console.log({ dataRow });
+      dataRecorder.appendToCSV(Object.values(dataRow));
       processedRepos++;
       console.log(`processed ${processedRepos}`);
     }

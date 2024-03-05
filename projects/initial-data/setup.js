@@ -10,8 +10,8 @@ export function getInput() {
     const token = args['github-token'] || process.env.GITHUB_TOKEN;
     const topic = args['topic'] || process.env.TOPIC;
     const numReposStr = args['num-repos'] || process.env.NUM_REPOS;
-    const numRepos = numReposStr
-      ? Number.isInteger(parseInt(numReposStr, 10))
+    const numRepos = Number.isInteger(parseInt(numReposStr, 10))
+      ? parseInt(numReposStr, 10)
       : 10;
 
     if (!token || !topic) {
