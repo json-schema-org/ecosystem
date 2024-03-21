@@ -16,6 +16,25 @@ async function fetchRepoCreationDate(octokit, owner, repo) {
   return response.data.created_at;
 }
 
+async function fetchFistCommitDate(octokit, owner, repo) {
+  console.log(`Fetching the first commit date for repository: ${owner}/${repo}`);
+  
+  const response = await octokit.request(`GET /repos/${owner}/${repo}/commits`, {
+      owner,
+      repo,
+      per_page: 1,
+  });
+  const lastPageUrl = response.headers.link?.match(/<([^>]+)>;\s*rel="last"/,)?.[1];
+
+  const firstCommitPageResponse = await octokit.request(`GET ${lastPageUrl}`, {
+      owner,
+      repo,
+      per_page: 1,
+  });
+  const firstCommitDate=(firstCommitPageResponse.data[0].commit.author.date);
+  return (firstCommitDate);
+}
+
 async function fetchRepoTopics(octokit, owner, repo) {
   console.log(`Fetching topics for repository: ${owner}/${repo}`);
   const response = await octokit.request('GET /repos/{owner}/{repo}/topics', {
@@ -73,14 +92,18 @@ async function processRepository(octokit, owner, repo, topic) {
   const creationDate = await fetchRepoCreationDate(octokit, owner, repo);
   const firstReleaseDate = await fetchFirstReleaseDate(octokit, owner, repo);
   const repoTopics = await fetchRepoTopics(octokit, owner, repo);
+  const firstCommitDate = await fetchFistCommitDate(octokit, owner, repo);
   console.log({ firstReleaseDate });
   if (firstReleaseDate === null) {
     console.log(`First release date: of ${githubRepoURL} unknown`);
   }
 
+  if (firstCommitDate === null) {
+    console.log(`First commit date: of ${githubRepoURL} unknown`);
+  }
+
   const dateTypes = [
-    ['creation', creationDate],
-    ...(firstReleaseDate !== null ? [['release', firstReleaseDate]] : []),
+    ['creation', creationDate], ...(firstReleaseDate !== null ? [['release', firstReleaseDate]] : []),
   ];
   console.log({ dateTypes });
 
@@ -122,9 +145,9 @@ async function processRepository(octokit, owner, repo, topic) {
       }
       return acc;
     },
-    { repository: `${owner}/${repo}`, repoTopics: `"${repoTopics.join(',')}"` },
-  );
+    { repository: `${owner}/${repo}`, repoTopics: `"${repoTopics.join(',')}"`, first_commit_date: firstCommitDate},
 
+  );
   return singleRowData;
 }
 
