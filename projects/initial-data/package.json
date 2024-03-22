@@ -8,7 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint . --ext js",
-    "eslint:fix": "pnpm run eslint -- --fix"
+    "eslint:fix":  "eslint . --ext js --fix"
   },
   "keywords": [],
   "author": "Ben Hutton",
