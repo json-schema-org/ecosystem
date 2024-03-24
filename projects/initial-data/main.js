@@ -16,6 +16,26 @@ async function fetchRepoCreationDate(octokit, owner, repo) {
   return response.data.created_at;
 }
 
+async function fetchFirstCommitDate(octokit, owner, repo) {
+  console.log(`Fetching first commit date for repository: ${owner}/${repo}`);
+  const response = await octokit.request('GET /repos/{owner}/{repo}/commits', {
+    owner,
+    repo,
+    per_page: 1,
+  });
+  
+  const lastPageUrl = response.headers.link?.match(
+    /<([^>]+)>;\s*rel="last"/,
+  )?.[1];
+  
+  if (!lastPageUrl) {
+    return response.data.length > 0 ? response.data[0].commit.author.date : null;
+  }
+
+  const lastPageResponse = await octokit.request(lastPageUrl);
+  return lastPageResponse.data.length > 0 ? lastPageResponse.data[0].commit.author.date : null;
+}
+
 async function fetchRepoTopics(octokit, owner, repo) {
   console.log(`Fetching topics for repository: ${owner}/${repo}`);
   const response = await octokit.request('GET /repos/{owner}/{repo}/topics', {
@@ -73,9 +93,14 @@ async function processRepository(octokit, owner, repo, topic) {
   const creationDate = await fetchRepoCreationDate(octokit, owner, repo);
   const firstReleaseDate = await fetchFirstReleaseDate(octokit, owner, repo);
   const repoTopics = await fetchRepoTopics(octokit, owner, repo);
+  const firstCommitDate = await fetchFirstCommitDate(octokit, owner, repo);
   console.log({ firstReleaseDate });
   if (firstReleaseDate === null) {
     console.log(`First release date: of ${githubRepoURL} unknown`);
+  }
+  
+  if (firstCommitDate === null) {
+    console.log(`First commit date: of ${githubRepoURL} unknown`);
   }
 
   const dateTypes = [
@@ -122,7 +147,7 @@ async function processRepository(octokit, owner, repo, topic) {
       }
       return acc;
     },
-    { repository: `${owner}/${repo}`, repoTopics: `"${repoTopics.join(',')}"` },
+    { repository: `${owner}/${repo}`, repoTopics: `"${repoTopics.join(',')}"`, date_first_commit: firstCommitDate},
   );
 
   return singleRowData;
