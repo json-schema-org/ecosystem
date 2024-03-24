@@ -20,16 +20,16 @@ async function fetchFistCommitDate(octokit, owner, repo) {
   console.log(`Fetching the first commit date for repository: ${owner}/${repo}`);
   
   const response = await octokit.request(`GET /repos/${owner}/${repo}/commits`, {
-      owner,
-      repo,
-      per_page: 1,
+    owner,
+    repo,
+    per_page: 1,
   });
   const lastPageUrl = response.headers.link?.match(/<([^>]+)>;\s*rel="last"/,)?.[1];
 
   const firstCommitPageResponse = await octokit.request(`GET ${lastPageUrl}`, {
-      owner,
-      repo,
-      per_page: 1,
+    owner,
+    repo,
+    per_page: 1,
   });
   const firstCommitDate=(firstCommitPageResponse.data[0].commit.author.date);
   const date = new Date(firstCommitDate);
