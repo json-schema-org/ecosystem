@@ -32,7 +32,9 @@ async function fetchFistCommitDate(octokit, owner, repo) {
       per_page: 1,
   });
   const firstCommitDate=(firstCommitPageResponse.data[0].commit.author.date);
-  return (firstCommitDate);
+  const date = new Date(firstCommitDate);
+  const datestamp = date.getTime();
+  return (datestamp);
 }
 
 async function fetchRepoTopics(octokit, owner, repo) {
