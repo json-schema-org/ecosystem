@@ -1,0 +1,11 @@
+repo,repo_topics,date_first_commit,creation,release
+tiangolo/fastapi,"python, json, swagger-ui, redoc, starlette, openapi, api, openapi3, framework, async, asyncio, uvicorn, python3, python-types, pydantic, json-schema, fastapi, swagger, rest, web",2018-12-05T06:56:50Z,2018-12-08T08:21:47Z,2018-12-15T17:59:25Z
+tiangolo/full-stack-fastapi-template,"python, json, json-schema, docker, postgresql, frontend, backend, fastapi, traefik, letsencrypt, swagger, jwt, openapi, chakra-ui, react, tanstack-query, tanstack-router, typescript, sqlmodel",2019-02-09T15:42:36Z,2019-02-23T15:08:34Z,2019-03-11T09:49:01Z
+pydantic/pydantic,"validation, parsing, json-schema, python37, python38, pydantic, python39, python, hints, python310, python311, python312",2017-05-03T21:23:41Z,2017-05-03T21:23:58Z,2017-05-06T14:48:58Z
+rjsf-team/react-jsonschema-form,"react, json-schema, forms, ui, web, json, data-validation",2015-12-16T15:16:14Z,2015-12-16T15:14:05Z,2015-12-17T16:58:33Z
+ajv-validator/ajv,"json-schema, validator, ajv",2015-05-19T23:23:32Z,2015-05-19T23:23:32Z,2015-06-13T12:01:05Z
+tiangolo/sqlmodel,"python, sql, sqlalchemy, pydantic, fastapi, json, json-schema",2021-08-24T12:41:53Z,2021-08-24T14:26:53Z,2021-08-24T18:25:55Z
+glideapps/quicktype,"json, typescript, json-schema, elm, java, swift, graphql, csharp, cplusplus, golang, objective-c, rust, kotlin",2017-07-13T00:22:10Z,2017-07-13T00:22:50Z,
+alibaba/formily,"react, json-schema, form, validator, observable, reactive, schema-form, fusion, ant-design, vue, vue3, designable, react-native, json-schema-form, low-code, no-code, react-form, vue-form, form-builder",2019-02-21T02:16:13Z,2019-01-09T02:11:45Z,2019-04-26T07:50:00Z
+alibaba/x-render,"javascript, react, ant-design, json-schema, formrender, widget, webpack, ant, typescript, table, chart, list, form",2019-09-26T07:58:27Z,2019-09-26T07:58:26Z,2019-10-16T01:40:33Z
+joelittlejohn/jsonschema2pojo,"java, json-schema, json, jackson, gson, maven-plugin, ant-task, gradle-plugin",2010-12-10T12:04:35Z,2013-06-22T22:28:53Z,2012-07-02T22:42:09Z

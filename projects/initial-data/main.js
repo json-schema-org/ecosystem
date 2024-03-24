@@ -1,10 +1,8 @@
 import { Octokit } from 'octokit';
-import cheerio from 'cheerio';
 import { getInput } from './setup.js';
 
 import { DataRecorder } from './dataRecorder.js';
 
-const WAYBACK_API_URL = 'http://archive.org/wayback/available';
 const CSV_FILE_NAME = `initialTopicRepoData-${Date.now()}.csv`;
 
 async function fetchRepoCreationDate(octokit, owner, repo) {
@@ -23,17 +21,21 @@ async function fetchFirstCommitDate(octokit, owner, repo) {
     repo,
     per_page: 1,
   });
-  
+
   const lastPageUrl = response.headers.link?.match(
     /<([^>]+)>;\s*rel="last"/,
   )?.[1];
-  
+
   if (!lastPageUrl) {
-    return response.data.length > 0 ? response.data[0].commit.author.date : null;
+    return response.data.length > 0
+      ? response.data[0].commit.author.date
+      : null;
   }
 
   const lastPageResponse = await octokit.request(lastPageUrl);
-  return lastPageResponse.data.length > 0 ? lastPageResponse.data[0].commit.author.date : null;
+  return lastPageResponse.data.length > 0
+    ? lastPageResponse.data[0].commit.author.date
+    : null;
 }
 
 async function fetchRepoTopics(octokit, owner, repo) {
@@ -66,27 +68,7 @@ async function fetchFirstReleaseDate(octokit, owner, repo) {
     : null;
 }
 
-async function fetchWaybackSnapshot(url, timestamp) {
-  console.log(
-    `Fetching Wayback Machine snapshot for URL: ${url} at timestamp: ${timestamp}`,
-  );
-  console.log(`${WAYBACK_API_URL}?url=${url}&timestamp=${timestamp}`);
-  const response = await fetch(
-    `${WAYBACK_API_URL}?url=${url}&timestamp=${timestamp}`,
-  );
-  const data = await response.json();
-  return data.archived_snapshots;
-}
-
-async function checkTopicInPage(url, topic) {
-  console.log(`Checking if topic "${topic}" exists in page: ${url}`);
-  const response = await fetch(url);
-  const html = await response.text();
-  const $ = cheerio.load(html);
-  return $(`a.topic-tag-link:contains('${topic}')`).length > 0;
-}
-
-async function processRepository(octokit, owner, repo, topic) {
+async function processRepository(octokit, owner, repo) {
   console.log(`Processing repository: ${owner}/${repo}`);
   const githubRepoURL = `https://github.com/${owner}/${repo}`;
 
@@ -98,57 +80,18 @@ async function processRepository(octokit, owner, repo, topic) {
   if (firstReleaseDate === null) {
     console.log(`First release date: of ${githubRepoURL} unknown`);
   }
-  
+
   if (firstCommitDate === null) {
     console.log(`First commit date: of ${githubRepoURL} unknown`);
   }
 
-  const dateTypes = [
-    ['creation', creationDate],
-    ...(firstReleaseDate !== null ? [['release', firstReleaseDate]] : []),
-  ];
-  console.log({ dateTypes });
-
-  const dataSets = dateTypes.map(async ([dateType, isoDate]) => {
-    if (isoDate) {
-      console.log(`Processing ${dateType} date: ${isoDate}`);
-      const date = new Date(isoDate);
-      const datestamp = date.getTime();
-      const archivedSnapshots = await fetchWaybackSnapshot(
-        githubRepoURL,
-        datestamp,
-      );
-      if (Object.keys(archivedSnapshots).length === 0) {
-        console.log(`Unable to find archive for ${githubRepoURL}`);
-      } else {
-        const archiveUrl = archivedSnapshots.closest.url;
-        if (archiveUrl) {
-          const topicExists = await checkTopicInPage(archiveUrl, topic);
-          return {
-            [`datestamp_${dateType}`]: datestamp,
-            [`archiveUrl_${dateType}`]: archiveUrl,
-            [`topicExists_${dateType}`]: topicExists,
-          };
-        } else {
-          console.error(
-            `Couldn't get closest archive URL given response from ${githubRepoURL}`,
-          );
-        }
-      }
-    }
-  });
-
-  const combinedData = await Promise.all(dataSets);
-
-  const singleRowData = combinedData.reduce(
-    (acc, cur) => {
-      if (cur) {
-        return { ...acc, ...cur };
-      }
-      return acc;
-    },
-    { repository: `${owner}/${repo}`, repoTopics: `"${repoTopics.join(',')}"`, date_first_commit: firstCommitDate},
-  );
+  const singleRowData = {
+    repository: `${owner}/${repo}`,
+    repoTopics: `"${repoTopics.join(', ')}"`,
+    date_first_commit: firstCommitDate,
+    creation: creationDate,
+    release: firstReleaseDate,
+  };
 
   return singleRowData;
 }
@@ -173,7 +116,6 @@ async function main(token, topic, numRepos) {
         octokit,
         repo.owner.login,
         repo.name,
-        topic,
       );
       console.log({ dataRow });
       dataRecorder.appendToCSV(Object.values(dataRow));
