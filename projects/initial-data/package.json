@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node start.js",
     "eslint": "eslint . --ext js",
-    "eslint:fix":  "eslint . --ext js --fix"
+    "eslint:fix": "pnpm run eslint --fix"
   },
   "keywords": [],
   "author": "Ben Hutton",
@@ -21,8 +21,11 @@
     "octokit": "^3.1.2"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.2",
     "eslint": "^8.54.0",
     "eslint-config-prettier": "^9.1.0",
+    "jest": "^29.7.0",
+    "msw": "^2.2.10",
     "prettier": "^3.1.0",
     "prettier-eslint": "^16.1.2"
   }
