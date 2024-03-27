@@ -10,7 +10,7 @@ export class DataRecorder {
     if (!fs.existsSync(this.fileName)) {
       fs.writeFileSync(
         this.fileName,
-        'repo,repo_topics,date_first_commit,creation,release\n',
+        'repo,repo_topics,date_first_commit,creation,date_first_release\n',
         'utf8',
       );
     }
