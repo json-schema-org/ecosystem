@@ -12,16 +12,16 @@ describe('Skretch Objective', () => {
   let data;
   it('receives a mocked response from the GitHub API', async () => {
     data = await fetchRepoCreationDate(octokit, 'octocat', 'hello-world');
-    expect(data).toEqual('2019-02-23T15:08:34Z');
+    expect(data).toEqual(1550934514000);
   
   
   });
 
   it('writes JSON data to csv file', async() => {
     const response = {
-      'date_first_commit': '2019-02-23T15:08:34Z',
+      'date_first_commit': 1550934514000,
     };
-    const spy = jest.spyOn(DataRecorder.prototype, 'appendToCSV').mockImplementation(() => fs.appendFileSync('test.csv', '2019-02-23T15:08:34Z\n', 'utf8'));
+    const spy = jest.spyOn(DataRecorder.prototype, 'appendToCSV').mockImplementation(() => fs.appendFileSync('test.csv', '1550934514000', 'utf8'));
     const dataRecorder = new DataRecorder('test.csv');
     dataRecorder.appendToCSV([response.date_first_commit]);
 
