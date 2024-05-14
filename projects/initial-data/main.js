@@ -160,9 +160,11 @@ async function main(token, topic, numRepos) {
   }
 }
 
-const { token, topic, numRepos } = getInput();
-console.log(
-  `Starting process with token: REDACTED, topic: ${topic}, numRepos: ${numRepos}`,
-);
+export function runMain() {
+  const { token, topic, numRepos } = getInput();
+  console.log(
+    `Starting process with token: REDACTED, topic: ${topic}, numRepos: ${numRepos}`,
+  );
 
-main(token, topic, numRepos);
+  main(token, topic, numRepos);
+}
