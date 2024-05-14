@@ -73,7 +73,7 @@ async function processRepository(octokit, owner, repo, topic) {
   const creationDate = await fetchRepoCreationDate(octokit, owner, repo);
   const firstReleaseDate = await fetchFirstReleaseDate(octokit, owner, repo);
   const repoTopics = await fetchRepoTopics(octokit, owner, repo);
-  console.log({ firstReleaseDate });
+
   if (firstReleaseDate === null) {
     console.log(`First release date: of ${githubRepoURL} unknown`);
   }
@@ -135,25 +135,26 @@ async function main(token, topic, numRepos) {
     q: `topic:${topic}`,
     per_page: 100,
   });
-  console.log(iterator);
   let processedRepos = 0;
 
-  const dataRecorder = new DataRecorder(CSV_FILE_NAME);
+  const dataRecorder = new DataRecorder(`./data/${CSV_FILE_NAME}`);
 
   for await (const iteration of iterator) {
     const data = iteration.data;
     for (const repo of data) {
-      if (numRepos !== -1 && processedRepos >= numRepos) break;
-      const dataRow = await processRepository(
-        octokit,
-        repo.owner.login,
-        repo.name,
-        topic,
-      );
-      console.log({ dataRow });
-      dataRecorder.appendToCSV(Object.values(dataRow));
-      processedRepos++;
-      console.log(`processed ${processedRepos}`);
+      try {
+        if (numRepos !== -1 && processedRepos >= numRepos) break;
+        const dataRow = await processRepository(
+          octokit,
+          repo.owner.login,
+          repo.name,
+        );
+        dataRecorder.appendToCSV(Object.values(dataRow));
+        processedRepos++;
+        console.log(`processed ${processedRepos}`);
+      } catch (err) {
+        console.error(err);
+      }
     }
 
     if (numRepos !== -1 && processedRepos >= numRepos) break;
