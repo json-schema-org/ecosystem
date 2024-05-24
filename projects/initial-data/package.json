@@ -6,7 +6,7 @@
   "main": "index.js",
   "engines": {},
   "scripts": {
-    "start": "node main.js",
+    "start": "node start.js",
     "test": "jest --watchAll --detectOpenHandles",
     "eslint": "eslint . --ext js",
     "eslint:fix": "pnpm run eslint --fix"
