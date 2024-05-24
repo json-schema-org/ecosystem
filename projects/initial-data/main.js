@@ -32,7 +32,7 @@ async function fetchFirstCommitDate(octokit, owner, repo) {
         response.data[0].commit.author.date;     
       } 
       else {
-        throw new Error('No commits found'); //TODO: check if this is the correct error message
+        throw new Error(`No commits found for ${owner}/${repo}`); //TODO: check if this is the correct error message
       }
     }
     
@@ -42,12 +42,11 @@ async function fetchFirstCommitDate(octokit, owner, repo) {
       return Date.parse(lastPageResponse.data[0].commit.author.date);     
     } else {
       console.error('Error occured');
-      throw new Error('No commits found'); //TODO: check if this is the correct error message
+      throw new Error(`No commits found ${owner}/${repo}`);  //TODO: check if this is the correct error message
     } 
   }
   catch(err) {
-    console.log(err);
-    throw new Error('No commits found'); //TODO: check if this is the correct error message
+    throw new Error(`Could not find any commits for ${owner}/${repo}`); //TODO: check if this is the correct error message
   }
 }
 
@@ -77,7 +76,7 @@ async function fetchFirstReleaseDate(octokit, owner, repo) {
         response.data[0].created_at;
       } 
       else {
-        throw new Error('No releases found'); //TODO: check if this is the correct error message
+        throw new Error(`No releases found for ${owner}/${repo}`); //TODO: check if this is the correct error message
       }
     }
 
@@ -86,12 +85,12 @@ async function fetchFirstReleaseDate(octokit, owner, repo) {
       return Date.parse(lastPageResponse.data[0].created_at);
     }
     else {
-      throw new Error('No releases found'); //TODO: check if this is the correct error message
+      throw new Error(`No releases found for ${owner}/${repo}`); //TODO: check if this is the correct error message
     }
   }
   catch(err) {
     console.error('Error occured');
-    throw new Error('No releases found'); //TODO: check if this is the correct error message
+    throw new Error(`Unable to get releases for ${owner}/${repo}`); //TODO: check if this is the correct error message
   }
 }
 
@@ -105,8 +104,7 @@ export async function processRepository(octokit, owner, repo) {
     firstReleaseDate = await fetchFirstReleaseDate(octokit, owner, repo);
   }
   catch(err) {
-    console.error('Error occured in fetchFirstReleaseDate');
-    throw new Error('No releases found');
+    throw new Error(`Unable to get releases for ${owner}/${repo}`);  
   }
   const repoTopics = await fetchRepoTopics(octokit, owner, repo);
   let firstCommitDate;
@@ -114,8 +112,7 @@ export async function processRepository(octokit, owner, repo) {
     firstCommitDate = await fetchFirstCommitDate(octokit, owner, repo);
   }
   catch(err) {
-    console.error('Error occured in fetchFirstCommitDate');
-    throw new Error('No commits found');
+    throw new Error(`Error trying to find first commit for ${owner}/${repo}`);
   }
   console.log({ firstReleaseDate });
   if (firstReleaseDate === null) {
