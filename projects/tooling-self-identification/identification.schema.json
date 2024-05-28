@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.json-schema.org/ecosystem/identification-v-0.0.1",
+  "title": "Tooling Project Self Identification Document",
+  "$comment": "Decided not to use JSON-LD and Schema.org concepts, as this complicates things without a clear benefit for our use case.",
+  "description": "This is a schema which represents a self reporting document published by a JSON Schema tooling creator, maintainer, or vendor.",
+  "$defs": {
+    "persons": {
+      "type": "array",
+      "items": {
+        "$comment": "TODO: Fill in this schema.",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "github": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "The name of the project",
+      "type": "string"
+    },
+    "description": {
+      "description": "A brief description of the project",
+      "type": "string"
+    },
+    "toolingType": {
+      "description": "The category of tooling of the project",
+      "type": "string",
+      "enum": [
+        "validator",
+        "hyper-schema",
+        "benchmarks",
+        "documentation",
+        "LDO-utility",
+        "code-to-schema",
+        "data-to-schema",
+        "model-to-schema",
+        "schema-to-types",
+        "schema-to-code",
+        "schema-to-web-UI",
+        "schema-to-data",
+        "util-general-processing",
+        "util-schema-to-schema",
+        "util-draft-migration",
+        "util-format-conversion",
+        "util-testing",
+        "editors",
+        "schema-to-documentation",
+        "schema-repository",
+        "linter",
+        "linter-plugins"
+      ]
+    },
+    "creators": {
+      "description": "The creators or authors of the project",
+      "$ref": "#/$defs/persons"
+    },
+    "maintainers": {
+      "description": "The maintainers of the project",
+      "$ref": "#/$defs/persons"
+    },
+    "license": {
+      "description": "The license under which the project is distributed. SPDX expressions or a URL.",
+      "$comment": "Schemastore package.json schema uses enum to assist in auto complete. Could be worth doing the same.",
+      "type": "string"
+    },
+    "projectType": {
+      "description": "The type of project, classified by Nadia Eghbal in Working in Public - https://project-types.github.io",
+      "type": "string",
+      "enum": [
+        "toy",
+        "club",
+        "stadium",
+        "federation"
+      ]
+    },
+    "repositoryURL": {
+      "type": "string",
+      "description": "The URL of the project's repository"
+    },
+    "repositoryStatus": {
+      "description": "The status of the project's repository, defined at https://www.repostatus.org",
+      "type": "string",
+      "enum": [
+        "concpet",
+        "WIP",
+        "suspended",
+        "abandoned",
+        "active",
+        "inactive",
+        "unsupported",
+        "moved"
+      ]
+    },
+    "homepageURL": {
+      "description": "The URL of the project's homepage",
+      "type": "string"
+    },
+    "documentation": {
+      "$comment": "This is reserved for future use",
+      "type": "object"
+    },
+    "supportedDialects": {
+      "description": "The declared supported dialects of JSON Schema. This includes draft version identifiers.",
+      "type": "object",
+      "properties": {
+        "draft": {
+          "description": "An array of dialects of JSON Schema.",
+          "type": "array",
+          "items": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              "2019-09",
+              "2020-12"
+            ]
+          }
+        }
+      }
+    },
+    "bowtie": {
+      "description": "Information related to compliance testing by Bowtie - https://bowtie.report - Presence of this property implies the tool is being tested in Bowtie",
+      "type": "object",
+      "properties": {
+        "identifier": {
+          "description": "The identifier used for the tool in Bowtie, including the language.",
+          "examples": [
+            "dotnet-jsonschema-net",
+            "js-ajv"
+          ]
+        }
+      },
+      "required": [
+        "identifier"
+      ],
+      "additionalProperties": false
+    },
+    "toolingListingNotes": {
+      "description": "Notes about the tooling which will appear in the tooling listing on the website.",
+      "type": "string"
+    },
+    "compliance": {
+      "description": "Details on what must be done to make the implementation the most compliant that it can be. This is displayed on the website with the tooling details",
+      "type": "object",
+      "properties": {
+        "config": {
+          "type": "object",
+          "properties": {
+            "docs": {
+              "description": "A URL which links to the documentation which explains how to follow the given instructions.",
+              "type": "string"
+            },
+            "instructions": {
+              "description": "Instructions on how to make the implementation the most compliant.",
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "landscape": {
+      "description": "Additional informatin that should be used when generating the JSON Schema landscape diagram - https://github.com/json-schema-org/landscape",
+      "type": "object",
+      "properties": {
+        "logo": {
+          "description": "The filename of the logo to use for the JSON Schema landscape diagram - Must be included in the landscape repo under the logos directory, and in SVG format.",
+          "type": "string"
+        }
+      }
+    },
+    "last-updated": {
+      "description": "A date in the format of YYYY-MM-DD which repersents when the document was last updated.",
+      "type": "string",
+      "regex": "^\\d{4}\\-(0[1-9]|1[012])\\-(0[1-9]|[12][0-9]|3[01])$"
+    }
+  },
+  "required": [
+    "name",
+    "repositoryURL"
+  ],
+  "additionalProperties": false
+}
