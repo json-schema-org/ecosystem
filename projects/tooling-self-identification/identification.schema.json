@@ -194,7 +194,10 @@
   },
   "required": [
     "name",
-    "repositoryURL"
+    "description",
+    "repositoryURL",
+    "toolingType",
+    "lastUpdated"
   ],
   "additionalProperties": false
 }
