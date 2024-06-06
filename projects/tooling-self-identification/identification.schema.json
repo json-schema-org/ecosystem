@@ -28,6 +28,11 @@
   },
   "type": "object",
   "properties": {
+    "$schema": {
+      "description": "Identifies the exact version of the schema and self reporting data structure to which the file intends to conform",
+      "type": "string",
+      "pattern": "https://schemas.json-schema.org/ecosystem/identification-v-\\d\\.\\d\\.\\d"
+    },
     "name": {
       "description": "The name of the project",
       "type": "string"
