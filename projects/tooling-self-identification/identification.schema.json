@@ -32,32 +32,37 @@
       "type": "string"
     },
     "toolingType": {
-      "description": "The category of tooling of the project",
-      "type": "string",
-      "enum": [
-        "validator",
-        "hyper-schema",
-        "benchmarks",
-        "documentation",
-        "LDO-utility",
-        "code-to-schema",
-        "data-to-schema",
-        "model-to-schema",
-        "schema-to-types",
-        "schema-to-code",
-        "schema-to-web-UI",
-        "schema-to-data",
-        "util-general-processing",
-        "util-schema-to-schema",
-        "util-draft-migration",
-        "util-format-conversion",
-        "util-testing",
-        "editors",
-        "schema-to-documentation",
-        "schema-repository",
-        "linter",
-        "linter-plugins"
-      ]
+      "description": "The categories of tooling for the project",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "description": "One of the categories of tooling of the project",
+        "type": "string",
+        "enum": [
+          "validator",
+          "hyper-schema",
+          "benchmarks",
+          "documentation",
+          "LDO-utility",
+          "code-to-schema",
+          "data-to-schema",
+          "model-to-schema",
+          "schema-to-types",
+          "schema-to-code",
+          "schema-to-web-UI",
+          "schema-to-data",
+          "util-general-processing",
+          "util-schema-to-schema",
+          "util-draft-migration",
+          "util-format-conversion",
+          "util-testing",
+          "editors",
+          "schema-to-documentation",
+          "schema-repository",
+          "linter",
+          "linter-plugins"
+        ]
+      }
     },
     "creators": {
       "description": "The creators or authors of the project",
