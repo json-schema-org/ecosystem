@@ -7,9 +7,13 @@
   "$defs": {
     "persons": {
       "type": "array",
+      "uniqueItems": "true",
       "items": {
-        "$comment": "TODO: Fill in this schema.",
         "type": "object",
+        "required": [
+          "name",
+          "github"
+        ],
         "properties": {
           "name": {
             "type": "string"
@@ -17,7 +21,8 @@
           "github": {
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       }
     }
   },
