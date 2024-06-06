@@ -193,6 +193,11 @@
         "logo": {
           "description": "The filename of the logo to use for the JSON Schema landscape diagram - Must be included in the landscape repo under the logos directory, and in SVG format.",
           "type": "string"
+        },
+        "optOut": {
+          "description": "Set this value to a boolean `true` value if you do not wish to be included in the JSON Schema Landscape. If you do, we would like to hear why.",
+          "type": "boolean",
+          "default": false
         }
       }
     },
