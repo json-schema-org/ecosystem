@@ -218,7 +218,8 @@
             ]
           }
         }
-      }
+      },
+      "additionalProperties": false
     },
     "bowtie": {
       "description": "Information related to compliance testing by Bowtie - https://bowtie.report - Presence of this property implies the tool is being tested in Bowtie",
