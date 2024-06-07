@@ -66,12 +66,86 @@
           "util-draft-migration",
           "util-format-conversion",
           "util-testing",
-          "editors",
+          "editor",
+          "editor-plugins",
           "schema-to-documentation",
           "schema-repository",
           "linter",
           "linter-plugins"
         ]
+      }
+    },
+    "languages": {
+      "description": "The languages the tool supports or can be used in or with",
+      "type": "array",
+      "items": {
+        "description": "Individual language name, from the list unless not included.",
+        "type": "string",
+        "anyOf": [
+          {
+            "enum": [
+              [
+                "Common Lisp",
+                "Rust",
+                "Elm",
+                ".NET",
+                "PHP",
+                "Clojure",
+                "Python",
+                "XSD",
+                "Scala",
+                "Orderly",
+                "Kotlin",
+                "Elixir",
+                "RAML",
+                "Erlang",
+                "Java",
+                "Lua/LuaJIT",
+                "OpenAPI",
+                "Perl",
+                "TypeScript",
+                "Ruby",
+                "Objective-C",
+                "Swift",
+                "C#",
+                "Go",
+                "C++",
+                "JavaScript"
+              ]
+            ]
+          },
+          {
+            "description": "A string value not yet included in the list of languages"
+          }
+        ]
+      }
+    },
+    "environment": {
+      "description": "The platforms or environments in which the tool or library is designed to operate. This field is optional and should be included when the tool or library is specific to a certain platform or environment.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "anyOf": [
+          {
+            "enum": [
+              "Web (Online)",
+              "GitHub Actions",
+              "Command Line",
+              "COM/ActiveX"
+            ]
+          },
+          {
+            "description": "A string value not yet included in the list of envrionments"
+          }
+        ]
+      }
+    },
+    "dependsOnValidators": {
+      "description": "Documents if the tool is the primary validator provider or depends on another tool",
+      "type": "array",
+      "items": {
+        "description": "The names of the tooling that this tooling depends upon",
+        "type": "string"
       }
     },
     "creators": {
