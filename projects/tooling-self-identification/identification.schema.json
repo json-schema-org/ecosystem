@@ -183,13 +183,15 @@
       "$comment": "Schemastore package.json schema uses enum to assist in auto complete. Could be worth doing the same.",
       "type": "string"
     },
-    "repositoryURL": {
+    "source": {
+      "description": "The URL of the project's repository",
       "type": "string",
-      "description": "The URL of the project's repository"
+      "format": "URL"
     },
-    "homepageURL": {
+    "homepage": {
       "description": "The URL of the project's homepage",
-      "type": "string"
+      "type": "string",
+      "format": "URL"
     },
     "documentation": {
       "$comment": "This is reserved for future use",
@@ -282,7 +284,7 @@
   },
   "required": [
     "name",
-    "repositoryURL",
+    "source",
     "toolingType",
     "lastUpdated"
   ],
