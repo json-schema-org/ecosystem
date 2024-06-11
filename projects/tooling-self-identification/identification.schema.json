@@ -179,7 +179,7 @@
       "description": "The status of the project's repository, defined at https://www.repostatus.org",
       "type": "string",
       "enum": [
-        "concpet",
+        "concept",
         "WIP",
         "suspended",
         "abandoned",
