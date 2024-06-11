@@ -262,7 +262,7 @@
       }
     },
     "landscape": {
-      "description": "Additional informatin that should be used when generating the JSON Schema landscape diagram - https://github.com/json-schema-org/landscape",
+      "description": "Additional information that should be used when generating the JSON Schema landscape diagram - https://github.com/json-schema-org/landscape",
       "type": "object",
       "properties": {
         "logo": {
