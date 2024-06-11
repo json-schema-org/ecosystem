@@ -146,6 +146,7 @@
       "type": "array",
       "items": {
         "description": "The names of the tooling that this tooling depends upon",
+        "$comment": "In the case where it's known that there are implementations with the same name in different programming languages, please use the repository or source URL.",
         "type": "string"
       }
     },
