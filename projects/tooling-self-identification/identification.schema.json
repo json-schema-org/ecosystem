@@ -11,18 +11,38 @@
       "items": {
         "type": "object",
         "required": [
-          "name",
-          "github"
+          "username",
+          "platform"
         ],
         "properties": {
           "name": {
+            "description": "The persons name, should they wish to provide it",
             "type": "string"
           },
-          "github": {
+          "email": {
+            "description": ""
+          },
+          "username": {
+            "description": "The persons username on the platform where the user exists",
             "type": "string"
-          }
-        },
-        "additionalProperties": false
+          },
+          "platform": {
+            "type": "string",
+            "anyOf": [
+              {
+                "enum": [
+                  "github",
+                  "gitlab",
+                  "bitbucket"
+                ]
+              },
+              {
+                "description": "A string value not yet included in the list of platforms"
+              }
+            ]
+          },
+          "additionalProperties": false
+        }
       }
     }
   },
@@ -163,33 +183,9 @@
       "$comment": "Schemastore package.json schema uses enum to assist in auto complete. Could be worth doing the same.",
       "type": "string"
     },
-    "projectType": {
-      "description": "The type of project, classified by Nadia Eghbal in Working in Public - https://project-types.github.io",
-      "type": "string",
-      "enum": [
-        "toy",
-        "club",
-        "stadium",
-        "federation"
-      ]
-    },
     "repositoryURL": {
       "type": "string",
       "description": "The URL of the project's repository"
-    },
-    "repositoryStatus": {
-      "description": "The status of the project's repository, defined at https://www.repostatus.org",
-      "type": "string",
-      "enum": [
-        "concept",
-        "WIP",
-        "suspended",
-        "abandoned",
-        "active",
-        "inactive",
-        "unsupported",
-        "moved"
-      ]
     },
     "homepageURL": {
       "description": "The URL of the project's homepage",
