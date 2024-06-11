@@ -39,6 +39,7 @@
     },
     "description": {
       "description": "A brief description of the project",
+      "$comment": "If this is omitted and description is already defined on GitHub or GitLab for the repository, we will use that information.",
       "type": "string"
     },
     "toolingType": {
@@ -284,7 +285,6 @@
   },
   "required": [
     "name",
-    "description",
     "repositoryURL",
     "toolingType",
     "lastUpdated"
