@@ -20,6 +20,8 @@ We (will) have automation that looks for data daily. It will look for data in Gi
 - Has a file called `.json-schema-identification.json` in the project's root
 - The JSON file validates successfully against the version of the self identification JSON Schema it declares
 
+While this tooling will initially only use GitHub, we will begin working on supporting other source hosts as soon as possible. We recognize that GitHub is not the only source code platform. If you'd like to help with this, please reach make yourself know in our Slack server.
+
 ## Why should I include this file in my tooling repository?
 
 If you define this file in your tooling repository, you will:
