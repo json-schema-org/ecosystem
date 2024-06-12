@@ -6,13 +6,37 @@ This project aims to enable tooling authors and maintainers to detail their tool
 
 The approach is to define a data structure for a file which is located in their own repo, which will then be located and extracted into a single file within this repository. Other repositories such as the website and landscape repositories, will then copy and transform the data as required. The data may be used to augment or totally replace the data they hold, if any.
 
+🚨 Note: This document details how everything SHOULD work when fully set up and running. The realization of this effort has not yet happened. This note will be removed once everything is working.
+
+## What data is here?
+
+In this repository in the `data` folder, there will be three files (sets of data) relating to tools and libraries which are in relation to this project.
+
+Community-Contributed Legacy data: The data provided by the community and maintainers which has been used for listing on the website.
+
+Maintainer-Provided data: The data provided by tooling and library maintainers through a file in their repositories, which is then copied into this repository.
+
+Ecosystem-Controlled Override data: The data used to override or correct data provided from maintainer repositories or legacy data.
+
+## What is the data used for?
+
+This data will be used for the listing of tools and libraries on the JSON Schema website, and for populating the JSON Schema landscape diagram (unless opted out).
+
+## How do I add to or modify the data?
+
+The Community-Contributed Legacy data is no longer accepting updates. No one should update this data.
+
+Any changes to the data requested by the maintainers or community should be done by detailing or updating self identifying data as explained later in this document. The Maintainer-Provided data in this repository should not be edited by anyone directly.
+
+The Ecosystem-Controlled Override data should hopefully not be used or modified very often. Such cases may be correcting data where the maintainer is no longer responding to requests to change the data or accept a Pull Request which would make the fix. This will only be edited by the JSON Schema team.
+
 ## Just Open Source for now
 
 This project only aims to capture the open source tooling, and does not include detailing or tracking of tools which are not open source.
 
 There may be further projects which aim to collate and combine data collected from other locations (such as this project), and primary data (such as information deposited into the website or later this repository in relation to close source tools).
 
-## How do I self identify my tool?
+## How do I self identify my tool or library?
 
 We (will) have automation that looks for data daily. It will look for data in GitHub repositories which meet the following conditions:
 
@@ -28,6 +52,16 @@ If you define this file in your tooling repository, you will:
 - Be able to update your listing on the JSON Schema website's tooling page
 - Have your tool listing show it's project status and be filterable based on the project status
 - Have your tool shown in the JSON Schema Landscape diagram (unless you opt out)
+
+## What will happen with the data?
+
+Data that's collected when it meets the above stated criteria will be used to create a Pull Request into the ecosystem repo to add or update the information.
+
+The data for tools lives in a single file in this repository, and will be duplicated out to the website repository and the landscape repository when modified. (You can opt-out of appearing in the landscape diagram if you wish, by setting `landscape > optOut` to `true`. This will mean the tool will only appear on the website.)
+
+The Pull Request will be reviewed by the JSON Schema team. If we need to ask for changes to your data file, we will do so by raising an Issue in the originating repository.
+
+When we receive and accept Maintainer-Provided data for a tool or library, we will remove the entry from the Community-Contributed Legacy data.
 
 ## Tooling categories definitions
 
@@ -63,3 +97,21 @@ The `toolingType` field defines the category or type of tool, which enables filt
 </table>
 
 </details>
+
+## My tool or library is already on the website or landscape diagram, but I haven't added the file. Where did that come from?
+
+Over the years many people have added to the list of "implementations" or tools on the JSON Schema website. We are using the data from the website repository as the basis for the initial data in this repository in relation to details of a tool or library.
+
+## The data shown on the site or the landscape diagram is different to the data I provided in the repository. What's happening?
+
+We reserve the right to override and/or augment any aspect of the provided data where we feel it is the right thing to do for whatever reason. We will do so by using another file in this repository which will contain only overriding data, which will take precedence.
+
+## I created the required file but it's not showing up! What's happening?
+
+We understand it may be frustrating, but we are here to help!
+
+First, check the data is valid according to the JSON Schema.
+
+Second, check the provided source URL matches the the repository location. If it doesn't, we may assume your repository is a fork which isn't intended to be an alternative to the forked project, to avoid duplicate entries.
+
+Otherwise (or if you're not sure how to resolve the problems above), please reach out to us on [Slack](https://json-schema.org/slack) or raise an Issue on GitHub. We would love to hear from you!
