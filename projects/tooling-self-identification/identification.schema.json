@@ -273,7 +273,8 @@
           "type": "boolean",
           "default": false
         }
-      }
+      },
+      "additionalProperties": false
     }
   },
   "required": [
