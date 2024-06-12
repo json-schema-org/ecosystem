@@ -89,7 +89,6 @@
           "util-testing",
           "editor",
           "editor-plugins",
-          "schema-to-documentation",
           "schema-repository",
           "linter",
           "linter-plugins"
