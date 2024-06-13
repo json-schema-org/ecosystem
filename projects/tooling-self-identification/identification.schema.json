@@ -221,6 +221,32 @@
       },
       "additionalProperties": false
     },
+    "supportedDialectsExtended": {
+      "description": "Additional Dialects that are supported beyond the ones defined by the JSON Schema project, such as the OpenAPI Dialect.",
+      "type": "array",
+      "items": {
+        "description": "Individual JSON Schema Dialect items",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "homepage": {
+            "type": "string",
+            "format": "uri"
+          },
+          "source": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "name",
+          "source"
+        ],
+        "additionalProperties": false
+      }
+    },
     "bowtie": {
       "description": "Information related to compliance testing by Bowtie - https://bowtie.report - Presence of this property implies the tool is being tested in Bowtie",
       "type": "object",
