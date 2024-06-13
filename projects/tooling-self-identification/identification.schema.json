@@ -62,7 +62,7 @@
       "$comment": "If this is omitted and description is already defined on GitHub or GitLab for the repository, we will use that information.",
       "type": "string"
     },
-    "toolingType": {
+    "toolingTypes": {
       "description": "The categories of tooling for the project",
       "type": "array",
       "uniqueItems": true,
@@ -140,7 +140,7 @@
         ]
       }
     },
-    "environment": {
+    "environments": {
       "description": "The platforms or environments in which the tool or library is designed to operate. This field is optional and should be included when the tool or library is specific to a certain platform or environment.",
       "type": "array",
       "items": {
