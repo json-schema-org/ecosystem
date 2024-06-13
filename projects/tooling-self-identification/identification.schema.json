@@ -186,12 +186,12 @@
     "source": {
       "description": "The URL of the project's repository",
       "type": "string",
-      "format": "URL"
+      "format": "uri"
     },
     "homepage": {
       "description": "The URL of the project's homepage",
       "type": "string",
-      "format": "URL"
+      "format": "uri"
     },
     "documentation": {
       "$comment": "This is reserved for future use",
