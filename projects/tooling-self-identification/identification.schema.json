@@ -164,9 +164,10 @@
       "description": "Documents if the tool is the primary validator provider or depends on another tool",
       "type": "array",
       "items": {
-        "description": "The names of the tooling that this tooling depends upon",
-        "$comment": "In the case where it's known that there are implementations with the same name in different programming languages, please use the repository or source URL.",
-        "type": "string"
+        "description": "The list of tooling that this tooling depends upon",
+        "$comment": "This should be the source URL. The source URL should already be known to the ecosystem repository in some way.",
+        "type": "string",
+        "format": "uri"
       }
     },
     "creators": {
