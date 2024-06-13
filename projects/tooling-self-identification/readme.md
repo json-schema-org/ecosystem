@@ -2,7 +2,7 @@
 
 JSON Schema has a vast ecosystem. We have documented a fraction of the existing tools out there for JSON Schema.
 
-This project aims to enable tooling authors and maintainers to detail their tools existence and additional information to be listed on the JSON Schema website and Landscape diagram.
+This project aims to enable tooling authors and maintainers to detail their tools' existence and additional information to be listed on the JSON Schema website and Landscape diagram.
 
 The approach is to define a data structure for a file which is located in their own repo, which will then be located and extracted into a single file within this repository. Other repositories such as the website and landscape repositories, will then copy and transform the data as required. The data may be used to augment or totally replace the data they hold, if any.
 
