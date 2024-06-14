@@ -55,11 +55,11 @@ If you define this file in your tooling repository, you will:
 
 ## What will happen with the data?
 
-Data that's collected when it meets the above stated criteria will be used to create a Pull Request into the ecosystem repo to add or update the information.
-
-The data for tools lives in a single file in this repository, and will be duplicated out to the website repository and the landscape repository when modified. (You can opt-out of appearing in the landscape diagram if you wish, by setting `landscape > optOut` to `true`. This will mean the tool will only appear on the website.)
+Data that's collected when it meets the above stated criteria copied into a file in the ecosystem repository. A Pull Request will then automatically be created to copy modifications into another file.
 
 The Pull Request will be reviewed by the JSON Schema team. If we need to ask for changes to your data file, we will do so by raising an Issue in the originating repository.
+
+The resulting final data for tools lives in a file in this repository, and will be duplicated out to the website repository and the landscape repository when modified. (You can opt-out of appearing in the landscape diagram if you wish, by setting `landscape > optOut` to `true`. This will mean the tool will only appear on the website.)
 
 When we receive and accept Maintainer-Provided data for a tool or library, we will remove the entry from the Community-Contributed Legacy data.
 
