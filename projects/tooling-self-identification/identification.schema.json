@@ -164,7 +164,7 @@
       "description": "Documents if the tool is the primary validator provider or depends on another tool",
       "type": "array",
       "items": {
-        "description": "The list of tooling that this tooling depends upon",
+        "description": "One of the tools that this tool depends upon",
         "$comment": "This should be the source URL. The source URL should already be known to the ecosystem repository in some way.",
         "type": "string",
         "format": "uri"
@@ -307,7 +307,7 @@
   "required": [
     "name",
     "source",
-    "toolingType"
+    "toolingTypes"
   ],
   "additionalProperties": false
 }
