@@ -7,7 +7,7 @@
   "$defs": {
     "persons": {
       "type": "array",
-      "uniqueItems": "true",
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "required": [
