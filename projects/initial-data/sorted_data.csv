@@ -1,0 +1,404 @@
+repo,repo_topics,date_first_commit,creation,date_first_release
+jsonform/jsonform,"json, json-schema, forms, html5, json-form, javascript",1317729960000,1317729948000,1528212983000
+inveniosoftware/invenio,"python, flask, elasticsearch, postgresql, redis, rabbitmq, digital-library, digital-repository, invenio, inveniosoftware, json-schema, angularjs, institutional-repository, multimedia-library, multimedia-repository",1018277831000,1319812431000,1028210160000
+python-jsonschema/jsonschema,"json-schema, json, validation, schema, jsonschema",1325216213000,1325216263000,1632956797000
+OParl/spec,"oparl, specification, api, restful, json, json-schema",1355427497000,1355415039000,1468399337000
+timbeadle/grunt-tv4,"needs-maintainer, grunt, json-schema, grunt-plugins",1371080436000,1371080435000,1460114036000
+joelittlejohn/jsonschema2pojo,"java, json-schema, json, jackson, gson, maven-plugin, ant-task, gradle-plugin",1291982675000,1371940133000,1341268929000
+ethlo/jsons2xsd,"json, json-schema, xml-schema, xsd, jsonschema, java, converter, xml",1372134259000,1372134183000,1514452069000
+tristanpenman/valijson,"json, json-schema, json-schema-validator, header-only",1383079871000,1383081017000,1527742810000
+timbeadle/tv4-reporter,"needs-maintainer, json-schema, tv4, reporter",1385228701000,1385228701000,1460111918000
+metosin/ring-swagger,"clojure, json-schema, rest, openapi, schema-elements, swagger, metosin-inactive",1388009764000,1391166225000,1399880960000
+json-schema-form/angular-schema-form,"angular, json-schema, angular-schema-form, json-ui-schema, json-schema-form",1395672163000,1395672163000,1398243035000
+snowplow/iglu,"json-schema, machine-readable, repository, snowplow",1399462217000,1399462217000,1403979024000
+jlblcc/json-schema-viewer,"json-schema, d3js, visualization",1400527092000,1400527092000,1442618781000
+rodikh/angular-json-editor,"json-editor, angular, json-schema",1401725245000,1401725287000,1416382556000
+jgarzik/univalue,"c-plus-plus, univalue, json, json-parser, json-schema, json-data, autotools, raii",1402603444000,1402602613000,1535765585000
+netheril96/StaticJSON,"c-plus-plus, json, json-schema, parsing",1410884154000,1410884154000,1469248965000
+AndersDJohnson/jackson-json-reference,"json-reference, java, json-schema, jackson, json-pointer, json",1412666561000,1412666571000,1454737644000
+horiuchi/dtsgenerator,"typescript, json-schema, swagger, opneapi",1413375747000,1413361224000,1460561804000
+APIDevTools/swagger-parser,"swagger, openapi, rest-api, json-schema, parser, resolver, validator, validation, nodejs, javascript, universal-javascript, openapi3",1413785820000,1413785691000,1443153857000
+mcustiel/php-simple-request,"php, annotations, json-schema, filter, validation, parse",1419133430000,1419133430000,1419636060000
+JamesNK/Newtonsoft.Json.Schema,"json, schema, c-sharp, json-schema",1417496987000,1419713884000,1421753257000
+duncanhall/expand-swagger-refs,"swagger-schema, json-schema, stdin, expanding-values, javascript",1423144910000,1423145038000,1490644689000
+eclipsesource/jsonforms,"react, redux, json, json-schema, forms, js, typescript, angular, material, customizable, vue, vue3",1486988129000,1423823046000,1505896291000
+nitely/tiny-json-validator,"javascript, json-schema, validator",1427150141000,1427150118000,1427151240000
+ngx-formly/ngx-formly,"forms, json-forms, dynamic-forms, angular, material, bootstrap, nativescript, ionic, primeng, kendo-ui, json-schema, schematics, formly, ng-zorro, ng-zorro-antd",1428551967000,1428551933000,1460124735000
+eclipsesource/play-json-schema-validator,"scala, json-schema, playframework, play-json",1429201598000,1429201597000,1471376947000
+ajv-validator/ajv,"json-schema, validator, ajv",1432077812000,1432077812000,1434196865000
+GochoMugo/elbow,"testing, mocha, json-api, json-schema",1432474178000,1432470565000,1432486742000
+farolfo/raml-server,"raml, swagger, api, mock, ui, raml-server, json-server, json-schema",1432737944000,1432737944000,1432966553000
+washingtonpost/ans-schema,"washington-post, json-schema, schema-files, arc, arc-publishing, arcxp",1435156501000,1435156501000,1611944340000
+json-schema-form/angular-schema-form-bootstrap,"json-schema, json-ui-schema, angular-schema-form, bootstrap, json-schema-form",1433425155000,1435586329000,1443214707000
+APIDevTools/json-schema-ref-parser,"javascript, nodejs, json-schema, json-reference, json-pointer, resolver, parser, universal-javascript",1436828005000,1436827949000,1451575232000
+ajv-validator/ajv-cli,"json-schema, validator, ajv, command-line",1437540649000,1437541948000,1437542334000
+rs/rest-layer,"api, rest-api, graphql, framework, go, api-server, api-documentation, storage-backend, json-schema, schema-fields",1437676740000,1438197380000,1483469469000
+snowplow/iglu-ruby-client,"json-schema, json, iglu, snowplow, validation, data",1484913705000,1440060005000,1486576600000
+ajv-validator/ajv-i18n,"json-schema, ajv, validator, internationalization, i18n",1441751069000,1441751069000,1447792519000
+brutusin/json-forms,"json-schema, json-form, html, json, form",1443104037000,1443104008000,1444740947000
+TechniqueSoftware/react-json-schema,"json-schema, react-components, react-elements, parser, react, javascript-library",1443723157000,1443723084000,1446839725000
+Narazaka/WithSchemaEditor,"json-schema-form, json-schema",1446335072000,1446332366000,1446337493000
+phramework/validate,"json-schema, validation, php",1444060497000,1448557074000,1521119833000
+taocpp/json,"json, jaxn, cbor, msgpack, ubjson, json-pointer, json-patch, json-schema, cpp, header-only, cpp17",1448566448000,1448566448000,1453841684000
+for-GET/jesse,"json-schema, erlang",1340035079000,1449309017000,1450312515000
+rjsf-team/react-jsonschema-form,"react, json-schema, forms, ui, web, json, data-validation",1450278974000,1450278845000,1450371513000
+alenkacz/gradle-json-validator,"json-validation, gradle, json-schema, json-schema-validator",1452943509000,1452943509000,1487710034000
+digitallinguistics/data-format,"linguistics, language, dlx, dlx-format, json, json-schema, schema, digital-linguistics, digital-humanities, corpus-linguistics, corpora, languages, natural-language, daffodil",1453519793000,1453519793000,1457161021000
+AmrEldib/agol-schemas,"arcgis, arcgis-api, json-schema",1454998007000,1455779626000,1460012031000
+dwhieb/jschemer,"documentation, json-schema, json, schema, schemas, json-data",1456708617000,1456708617000,1484793718000
+estahn/phpunit-json-assertions,"phpunit, json-schema, phpunit-assertions",1457142639000,1457142639000,1458107265000
+json-schema-form/json-schema-form-core,"json-schema, angular-schema-form, json-ui-schema, json-schema-form, react-schema-form, angular, ui-schema",1457465804000,1457465804000,1485264356000
+NodeJunkie/node-json-schema-class,"json-schema, ajv, props",1458429338000,1458429338000,1588621849000
+javiercejudo/modelico,"serialization, models, immutability, json-schema",1459053933000,1459053914000,1459668763000
+danascheider/json_test_data,"json-schema, test-data-generator",1460075151000,1460075150000,1460150497000
+okitan/json_schema-faker,"json-schema, faker, gem",1463294081000,1463294140000,1464795941000
+rootsdev/gedcomx-json-schema,"json-schema, gedcomx, genealogy",1463669400000,1463669400000,1463685995000
+skolmer/i18n-tag-schema,"es2015, es6, i18n, javascript, l10n, localization, translation, json-schema, export, validation",1463991730000,1463991729000,1466855690000
+guillotinaweb/ngx-schema-form,"angular, angular2, json-schema",1464792579000,1464790285000,1579855297000
+Limenius/LiformBundle,"forms, json-schema, reactjs, symfony, symfony-bundle",1456437140000,1465069734000,1513360335000
+ajv-validator/ajv-keywords,"json-schema, ajv, validator, keywords",1448722748000,1465155005000,1474494486000
+mmiller42/autonym,"autonym, kiss, json, rest, api, express, middleware, json-schema, nodejs",1467906692000,1466305451000,1506228820000
+sindresorhus/conf,"config, configuration-management, preferences, storage, json-schema, json, command-line, node-module, npm-package",1466546388000,1466546645000,1542032502000
+metosin/spec-tools,"clojure, clojure-spec, json-schema, swagger, clojurescript, metosin-inactive",1466598205000,1466598205000,1588697354000
+aishfenton/Argus,"json-schema, scala, json-encoder",1467173924000,1467174337000,1471625347000
+ajv-validator/ajv-merge-patch,"json-schema, ajv, keywords, json-merge-patch, json-patch",1471116861000,1471116861000,1472586467000
+willnet/committee-rails,"rails, json-schema",1473247834000,1473247996000,1543243183000
+networknt/json-schema-validator,"json-schema-validator, json-schema, fast, java8, draft, v4, jackson, java, v6, v7, v2019-09, draftv4, draftv6, draftv7, json, yaml, openapi3, v2020-12",1473942257000,1473942256000,1474161733000
+inspirehep/inspire-schemas,"inspirehep, python, json-schema, json",1474473396000,1474553918000,1675347509000
+Genivia/SJOT,"json-validation, sjot-schemas, schema-checker, lightweight, json-schema, type-check",1475376313000,1475095548000,1475894325000
+sagold/json-schema-library,"json-schema, customizable, traversal, pointer, validation, library, npm-package",1478719475000,1478712284000,1688417588000
+krishnan-mani/cf-plugin,"cloudformation, json, json-schema, visual-studio-code-extension",1479781111000,1479925618000,1496062921000
+chrisandrews7/loopback-jsonschema-generator,"json-schema, loopback, loopback-models, nodejs, json, loopback-component",1480718045000,1480619784000,1480765344000
+deliveryhero/serverless-aws-documentation,"serverless, api-gateway, json-schema, documentation, documentation-generator, aws, aws-apigateway",1480673448000,1480934742000,1481557569000
+timeoutdigital/docless,"json-schema, shapeless, documentation, swagger",1478554298000,1481880679000,1484422878000
+ajv-validator/ajv-async,"json-schema, ajv, async, configuration",1482758000000,1482758000000,1509914527000
+aaharu/schemarshal,"json-schema, go, go-generate, struct, json-schema-to-go-structs",1483463676000,1483463573000,1483635418000
+ES-Collection/Jaxon,"presets, extendscript, adobe, json-schema, json",1494402990000,1483835211000,1494402990000
+ska-sa/tango-simlib,"pytango, tango-controls, json-schema, json-parser, xml-parser, pogo, simulation-framework",1484750687000,1484664230000,1489743259000
+vectordotdev/log-event-json-schema,"logging, json-schema, timber, structured-logging, schema",1485360776000,1485300380000,1486163990000
+swaggest/php-json-schema,"json-schema, php-structures, php, hacktoberfest",1464499947000,1485684437000,1485713612000
+Limenius/Liform,"json-schema, php, forms, symfony",1485722139000,1485722173000,1489085329000
+matchtechnologies/tomograph,"api-blueprint, drafter, json-schema, converter, swagger, openapi, openapi3, cli",1485514228000,1486373244000,1497515953000
+matchtechnologies/fitting,"api-blueprint, rspec, drafter, json-schema, validation, consumer-driven-contracts, coverage-api, swagger, openapi, openapi3, coverage, document-driven-development, tests-coverage, webmock",1485514590000,1486373559000,1497860970000
+matchtechnologies/esplanade,"api-blueprint, drafter, json-schema, validation",1485515190000,1486373903000,1485515190000
+sloev/python-lambdarest,"aws-lambda, python, json-schema, framework, routing, aws, lambda, werkzeug, balancer, pypi",1486481435000,1486481404000,1507032334000
+pinterest/plank,"swift, objective-c, models, macos, ios, flowtype, java, android, schema, json, json-schema",1489766003000,1487113602000,1489766648000
+GerhardHH/e2u-json-object-editor,"polymer, json-schema, autoform",1487159655000,1487158153000,1487159655000
+bahmutov/validate-by-example,"json-schema, json, validate, derive, train",1487166444000,1487165840000,1487166444000
+bahmutov/schema-shot,"schema, json-schema, snapshot, testing",1487216682000,1487216347000,1487219149000
+ajv-validator/ajv-errors,"ajv, json-schema, validator, errors",1488713809000,1488713808000,1493576816000
+dragonwasrobot/json-schema-to-elm,"elm, json-schema, json, elixir, json-decoder, json-encoder, elm-lang, elixir-lang, code-generator, parser-generator",1488752788000,1488752787000,1491143392000
+buildtesters/buildtest,"test-automation, testing-framework, yaml, system-testing, hpc, json-schema, buildtest",1487458141000,1488893973000,1493216340000
+vanilla/garden-schema,"library, json-schema",1488824047000,1489024312000,1489028451000
+simonplend/express-json-validator-middleware,"expressjs, express-middleware, json, json-schema, ajv, json-schemas, express",1490369580000,1490369580000,1508084894000
+ajv-validator/json-schema-migrate,json-schema,1490399074000,1490399073000,1607119675000
+swaggest/go-code-builder,"go, php-library, json-schema, json-schema-generator, code-generator",1490607017000,1490607016000,1490607175000
+allthingstalk/go-sdk,"iot, iot-device, sdk, sdk-go, allthingstalk, golang, go, allthingstalk-maker, json-schema, makers",1490697223000,1490697223000,1506328092000
+hartfordfive/protologbeat,"elasticsearch, tcp, udp, logging, syslog, json-schema, json, libbeat",1493421899000,1492175090000,1493721186000
+swaggest/php-code-builder,"php, json-schema, code-generator",1476184880000,1493361356000,1493269314000
+andyglow/scala-jsonschema,"json-schema, scala",1493386577000,1493386577000,1640228678000
+pydantic/pydantic,"validation, parsing, json-schema, python37, python38, pydantic, python39, python, hints, python310, python311, python312",1493846621000,1493846638000,1494082138000
+santhosh-tekuri/jsonschema,"golang, json-schema, jsonschema, validator, golang-library, go, draft4, draft6, draft7, draft2019-09, json, validation, draft2020-12",1494369985000,1494369686000,1564476188000
+getbannerman/babl,"json, babl, rails, ruby, preloader, dsl, api, functional, immutable, json-schema, babl-template, dependency-analysis, template-engine",1494862470000,1494863368000,1494887497000
+JsonSchema-JavaUI/sf-java-ui,"angular-schema-form, json-schema-form, json-schema, json-schema-forms, angular, angularjs, java, java-8, java8, java-library, ui, uiview, ux-ui, ui-model, schema",1495400854000,1495400854000,1498582320000
+frictionlessdata/datapackage-java,"datapackage-java, datapackage, frictionlessdata, java, java8, java-8, json-schema, data-science",1496036580000,1496036580000,1656328728000
+frictionlessdata/tableschema-java,"table-schema, tableschema-java, json, csv, java, json-schema, frictionlessdata, java-8, java8",1500511971000,1496036633000,1656322399000
+GenomicsStandardsConsortium/mixs,"contextual-data, gsc, json-schema, standard, metagenomes, genomics, bioinformatics",1496237781000,1496237780000,1645987057000
+americanexpress/jest-json-schema,"jest, testing, json, json-schema, one-app, matchers",1490804689000,1496337889000,1610123178000
+vega/ts-json-schema-generator,"json-schema, typescript, compiler, generator",1485939907000,1496380141000,1610800737000
+epoberezkin/json-schema-traverse,json-schema,1496601548000,1496601547000,1496693849000
+67P/kosmos-schemas,"kosmos, json, json-ld, json-schema, json-schemas",1496664524000,1496664543000,1589382002000
+diegohaz/schm,"schema, functional-programming, parse, validate, compose, joi, json-schema, lerna",1497293004000,1496958584000,1515803254000
+wy-z/tspec,"json-schema, tspec, go, schema, openapi, ast",1500365669000,1500365669000,1503387371000
+ridi/lightweight-rest-tester,"json-schema, python, rest-api, end-to-end-testing",1499670685000,1500627244000,1501839681000
+simplymequeeny/json-string-schema-generator,"json, json-schema, java, json-schema-generator",1502236135000,1502243498000,1502304511000
+theochem/iodata,"quantum-chemistry, quantum-chemistry-programs, quantum-chemistry-packages, computational-chemistry, computational-biology, computational-physics, file-format-converter, data-parsing, json-schema, theoretical-chemistry, molecular-mechanics, molecular-dynamics, molecular-simulation, input-output, file-formats, file-format-library, molecular-dynamics-simulation, file-conversion, file-converter, molecular-electronic-structure",1359377506000,1502641479000,1505388492000
+wy-z/tproto,"protobuf, json-schema, go, grpc, ast",1505030363000,1505030362000,1506311354000
+beerjson/beerjson,"beerjson, json-schema",1508934238000,1508934237000,1622640380000
+livingdocsIO/microschema,"jsonschema, json-schema, schema",1509158316000,1509158188000,1521570752000
+loyd/flow2schema,"flow, flowtype, avro, avsc, json-schema",1509231339000,1509231212000,1513507177000
+atlassian/better-ajv-errors,"json-schema, ajv",1509597501000,1509597571000,1568561741000
+PolymerVis/monaco-editor,"polymer, polymer2, monaco-editor, vscode, code-editor, browser-based-text-editor, json-schema, webcomponents",1509860754000,1509860754000,1510073373000
+Telefonica/govice,"go, logging, logger, config, golang, validation, json-schema, service",1510557556000,1510557556000,1510610882000
+EMBL-EBI-SUBS/json-schema-validator,"nodejs, javascript, json-schema, validator",1511264955000,1511275549000,1515754199000
+oaijs/ajv-oai,"openapi, swagger, json-schema, jsonschema, validator, ajv, openapi-jsonschema-validator",1511539054000,1511539090000,1578665160000
+authzforce/xacml-json-model,"json-schema, xacml",1511568104000,1511567109000,1590096500000
+epiphone/class-validator-jsonschema,"validation, typescript-validation, openapi3, json-schema, api-documentation, api-documentation-tool",1511643381000,1511959285000,1609393976000
+opis/json-schema,"json-schema, json-pointer, php, opis",1512176619000,1512176544000,1547036741000
+janephp/janephp,"php, json-schema, open-api, psr18, sdk, hacktoberfest",1512314956000,1512314592000,1518445978000
+jarvelov/vue-form-json-schema,"json-schema, vue, vue-component, form-generator, schema, form, generator, vue2, vuejs2, components, component, vue-components, ajv, forms, form-schema, json",1512071992000,1512370508000,1545764750000
+adobe/jsonschema2md,"json-schema, markdown",1467814050000,1512395479000,1552921472000
+adobe/xdm,"xdm, json-schema, data-models",1467814050000,1512398424000,1523572665000
+chharvey/schemaorg-jsd,"json-schema, schema-org, json-ld",1515175259000,1515175258000,1515547143000
+miracl/conflate,"configuration, config, configuration-management, golang, golang-library, json, json-schema, yaml, toml, merge, structs",1507842213000,1515581462000,1523961685000
+qri-io/jsonschema,"golang, json-schema",1515797845000,1515797905000,1559579509000
+sonata-nfv/tng-schema,"nfv, sdn, 5gtango, datamodel, specification, json-schema, yaml-files, 5gtango-schemas, 5g",1455529747000,1516015767000,1536575865000
+cipchk/nz-schema-form,"ng-zorro-antd, ng-alain, delon, angular-components, angular5, json-schema, dynamic-forms",1516887582000,1516801235000,1519994954000
+datastreamapp/schema,"json-schema, wqx",1517945845000,1517945845000,1521140770000
+bjansen/swagger-schema-validator,"swagger, json-validation, json-schema, swagger-validator",1518864614000,1518864613000,1518867647000
+swaggest/json-cli,"json-schema, json-patch, json-pointer, code-generator",1518971016000,1518969937000,1518972340000
+remcohaszing/monaco-yaml,"monaco-editor, monaco, yaml, json-schema",1466776806000,1519625284000,1626613280000
+ltworf/typedload,"namedtuple, json, typing, types, python3, mypy, dataclass, schema, json-schema, enums, pydantic, python",1521858243000,1521858242000,1523141979000
+NC3-LU/MOSP,"json, json-schema, security, open-directory, information-exchange, information-sharing, cybersecurity, json-objects, json-editor",1522274645000,1522274703000,1526224105000
+wework/json-schema-to-openapi-schema,"json-schema, openapi, openapi-schema, api, api-documentation, api-documentation-tool, api-specs",1509539191000,1522710604000,1523306417000
+leadpony/justify,"json-schema, validator, java, validation, json, yaml",1523537566000,1523537566000,1544446090000
+martin-helmich/php-schema2class,"php, json-schema, code-generation, code-generator",1523723854000,1523797604000,1707752496000
+cypress-io/schema-tools,"json-schema, cypress-io, schema, utils",1523993988000,1523986830000,1524066800000
+wol-soft/php-json-schema-model-generator,"json-schema, jsonapi, code-generator, code-generation, model, immutable-objects, immutable, middleware, schema-model, php-model, php-library, php, php73, php74, schema-files, openapi, openapi3, openapi-generator, json-schema-models, php8",1524150218000,1524150217000,1567759502000
+ImFlog/schema-registry-plugin,"kafka-schema-registry, gradle-plugin, avro-kafka, avro, kafka, gradle, kotlin, confluent, json-schema, protocol-buffers",1525452503000,1525452502000,1532103108000
+stencila/schema,"json-schema, schema-org, r, python, typescript, semantic, rust, vocabulary",1526781023000,1527475826000,1540534745000
+charlypoly/graphql-to-json-schema,"graphql, json-schema, typescript, nodejs",1527684491000,1527684490000,1611092649000
+linterhub/schema,"json-schema, linter, package-management, linterhub, spdx, linguist, static-analysis, catalog",1528920602000,1528920600000,1529421292000
+sixlive/laravel-json-schema-assertions,"json-schema, laravel, php, phpunit",1529690232000,1530465116000,1530966613000
+hamzahamidi/ajsf,"angular, angular-forms, form-generator, angular-material, bootstrap4, bootstrap3, bootstrap, json-schema, json-schema-form, ajsf, material, widgets, hacktoberfest, angular9, angular10, angular11, angular12, angular13, angular14",1530716706000,1530865490000,1532097381000
+vip-git/universal-json-schema,"material-ui, react, json-schema, json-schema-form, jsonschema-form, model-driven-forms, material-ui-advanced-forms, material-ui-forms, xhr-schema, uischema, reference-schema, interceptors, xhrschema, ui-schema, mui",1531168189000,1531167175000,1533767700000
+thedumbterminal/jsonschema-bigquery,"json-schema, bigquery, nodejs, node-js, node-module, nodejs-module, nodejs-modules",1532208682000,1532208681000,1532212661000
+tillhub/schemas,json-schema,1532373045000,1532373072000,1532390334000
+Attumm/Maat,"validation, serialization, dictionary, json-schema, security, fast, nested-structures, parser, types, validator",1499011206000,1532390939000,1624673182000
+dragonwasrobot/json_schema,"json, json-schema, parser, elixir, elixir-lang, elixir-library",1488752788000,1532559361000,1532655473000
+stoplightio/spectral,"json-schema, jsonpath, openapi, openapi3, oasv3, oas, openapi-specification, json-lint, json, linting, swagger, hacktoberfest",1534358564000,1534358598000,1544508094000
+leadpony/justify-examples,"json-schema, validator, java, json-processing, json-binding",1534774806000,1534774806000,1587886699000
+tmforum-rand/schemas,"schema, schemas, json-schema, tmforum",1535717679000,1535717678000,1575458967000
+sixlive/json-schema-assertions,"json-schema, phpunit",1535979688000,1535980897000,1537475231000
+koumoul-dev/vuetify-jsonschema-form,"vue, vuetify, json-schema, vjsf",1536000805000,1536000804000,1539373362000
+zweidenker/JSONSchema,"pharo, smalltalk, json-schema, json",1536581656000,1536581644000,1539119938000
+jsonx-org/java,"jsonx, enterprise, java, binding, generator, validator, consumer-driven-contracts, jsonx-schema, json-schema, schema, jsd, jsdx, json, binding-generator",1521280918000,1537028104000,1557741961000
+omissis/go-jsonschema,"golang, go, json-schema, json, codegenerator, code-generation",1537465770000,1538069792000,1538241134000
+expresso/validator,"validator, json-schema, validation, schema",1538513799000,1538513798000,1606179319000
+airtasker/spot,"openapi, swagger, typescript, api-blueprint, dsl, json-schema, openapi3",1539251674000,1539251746000,1543470307000
+stoplightio/json-ref-resolver,"json-parser, json, json-schema, json-data, swagger, openapi, resolver",1540349749000,1540348419000,1540359280000
+Fatal1ty/mashumaro,"serialization, deserialization, python, python3, marshalling, dataclasses, json, msgpack, yaml, typehints, type-hints, toml, jsonschema, json-schema, openapi, serde",1536656215000,1541764256000,1543317108000
+jbockle/au-jsonschema-form,"json-schema, aurelia, forms",1595213120000,1541888871000,1596084215000
+cedardevs/schemas,"schemas, avro-schema, json-schema",1543870951000,1543870951000,1546904742000
+tiangolo/fastapi,"python, json, swagger-ui, redoc, starlette, openapi, api, openapi3, framework, async, asyncio, uvicorn, python3, python-types, pydantic, json-schema, fastapi, swagger, rest, web",1543993010000,1544257307000,1544896765000
+tiangolo/full-stack-fastapi-couchbase,"python, python3, json, json-schema, docker, couchbase-sync-gateway, couchbase, frontend, backend, fastapi, traefik, letsencrypt, swagger, celery, jwt, vue, vuex, cookiecutter, openapi, openapi3",1512125703000,1544514805000,1547266277000
+openfext/vue-form-builder,"vue, form, form-builder, form-schema, form-generator, json-form, vue-form, vue-form-builder, vee-validate, vue-composition-api, vue-use, vue-hooks, composition-api, json-schema, element-ui, iview, viewui, ant-design, ant-design-vue, vuetify",1544694437000,1544694436000,1546329337000
+brunexgeek/protogen,"json, json-schema, protobuf3, json-generator, cpp, compiler, serialization, single-file",1544729682000,1544729681000,1545996561000
+open-rpc/meta-schema,"meta-schema, json-schema, openrpc-specification, schema",1545351354000,1545350277000,1552978340000
+stoplightio/json-schema-viewer,"json-schema-viewer, storybook, stoplightio, json-schema, react",1545855162000,1545854598000,1547730011000
+tiangolo/uvicorn-gunicorn-fastapi-docker,"uvicorn, gunicorn, asgi, web, python, async, docker, docker-image, websockets, json, swagger-ui, redoc, openapi, openapi3, pydantic, json-schema, python-types, fastapi",1546629852000,1546623209000,1549624689000
+luposlip/json-schema,"json-schema, clojure-library, json-validation, data-validator, edn, validation",1546881366000,1546881414000,1618479309000
+alibaba/formily,"react, json-schema, form, validator, observable, reactive, schema-form, fusion, ant-design, vue, vue3, designable, react-native, json-schema-form, low-code, no-code, react-form, vue-form, form-builder",1550715373000,1546999905000,1556265000000
+ariesb/autokin,"gherkin, automation, rest-api, contract-testing, bdd, json-schema, scenario, response-schema, api, testing, rest-client, puppeteer, web",1547168522000,1547168521000,1563350799000
+jgarzik/jup,"cplusplus, json, json-parser, json-schema, json-data, stdin, stdout",1335554134000,1547615822000,1549184126000
+biolink/biolinkml,"json-schema, shex, owl, uml, json-ld, biolink, semantic-web, deprecated-repo",1548632082000,1548464846000,1594668624000
+CarstenWickner/react-jsonschema-inspector,"react, reactjs, react-component, json-schema, viewer",1550187277000,1550187395000,1552070829000
+fastify/env-schema,"environment, environment-variables, json-schema, validation, fastify-library",1550230511000,1550230510000,1561988115000
+eduardomourar/python-functionapprest,"python, json-schema, routing, framework, azure-functions",1550758575000,1550758574000,1550780930000
+tiangolo/full-stack-fastapi-template,"python, json, json-schema, docker, postgresql, frontend, backend, fastapi, traefik, letsencrypt, swagger, jwt, openapi, chakra-ui, react, tanstack-query, tanstack-router, typescript, sqlmodel",1549726956000,1550934514000,1552297741000
+tcudok/json-schema-to-type,"typescript, json-schema",1550916887000,1550953643000,1551016363000
+Eomm/fastify-schema-constraint,"fastify, fastify-plugin, json-schema",1552499070000,1552499069000,1554492865000
+asyncapi/parser-js,"parser, json-schema, hacktoberfest, javascript, nodejs, get-global-node-release-workflows, get-global-releaserc, get-global-docs-autoupdate",1552874802000,1552874747000,1583318440000
+event-engine/php-json-schema,"event-engine, prooph, json-schema, php7",1553105565000,1553105564000,1553117626000
+m1x0n/opis-error-presenter,"json-schema, opis, php",1554149863000,1554160587000,1556462228000
+khalidx/resource-x,"api, markdown, json-schema, swagger, aws-api-gateway",1556943418000,1556943309000,1562036829000
+victools/jsonschema-generator,"jackson, jsonschema-generator, json-schema, java",1556959912000,1556959911000,1558160140000
+gerald1248/validate-yaml,"yaml-validator, json-schema",1557419123000,1557419122000,1557450309000
+launchcodedev/app-config,"config, typescript, javascript, configuration, configuration-loader, schema-validation, json-schema",1537160291000,1558023579000,1614354098000
+metosin/malli,"clojure, clojurescript, validation, modelling, transformation, json-schema, coercion, inferring-schemas, generators, error-messages, visualizing-schemas, metosin-active",1558122579000,1558120911000,1695570398000
+victools/jsonschema-module-javax-validation,"javax-validation, jsonschema-generator, json-schema",1558296789000,1558296788000,1558474376000
+victools/jsonschema-module-jackson,"jackson-annotation, jsonschema-generator, json-schema",1558550746000,1558550745000,1560198486000
+koxudaxi/datamodel-code-generator,"openapi, code-generator, python, pydantic, generator, fastapi, json-schema, datamodel, swagger, yaml, csv, openapi-codegen, swagger-codegen, dataclass",1559116893000,1559116892000,1563884833000
+snowplow/iglu-server,"scala, schema-registry, iglu, snowplow, json-schema",1559200677000,1559195659000,1559203868000
+rollrodrig/customjsonbuilder,"json, json-schema, generator, fake-data",1559338113000,1559338112000,1559691138000
+paolo-rossi/OpenAPI-Delphi,"delphi, json-schema, openapi, rest, rest-api, swagger",1559581642000,1559581641000,1559632882000
+xatavian/easyjsonparser,"python, json, json-schema, parser-library",1559322889000,1559597746000,1560583174000
+benjamin-allion/json-node-normalizer,"json, json-schema, normalization, json-data, cast, transformation, converter, nodejs-modules, nodejs",1559641977000,1559641976000,1573033248000
+enter-at/python-aws-lambda-handlers,"aws-lambda, python, http, marshmallow, json-schema",1561135359000,1560867949000,1561995805000
+tomcollins/json-schema-static-docs,"json-schema, documentation, documentation-generator",1561473195000,1561472710000,1561578575000
+gustaveroussy/rna-count-kallisto,"snakemake-workflow, snakemake, bioinformatics, reproducible-workflows, kallisto, fastqc, multiqc, conda, json-schema",1561475831000,1561475685000,1561623960000
+imrafaelmerino/json-values,"persistent-data-structure, json, immutable, java, functional-programming, immutable-objects, json-api, json-values, json-generator, json-schema, prng, property-based-testing, avro-schema",1562686860000,1561924886000,1564352720000
+jsonx-org/schema,"jsonx, enterprise, json, schema, jsonx-schema, json-schema, consumer-driven-contracts, validation, jsd, jsdx, xml, xsd",1554140286000,1562692457000,1563790975000
+e0ipso/schema-forms-php,"php, forms, schema, drupal-8, drupal, json-schema",1564035258000,1564035496000,1658251138000
+IBM/jsonsubschema,"json-subschema, json-schema, subtyping, subschema",1558820687000,1564668099000,1619012553000
+alt3/sequelize-to-json-schemas,"javascript, sequelize, json-schema, strategy-pattern, swagger, openapi, oas, oas2",1565812784000,1564824560000,1566575099000
+GREsau/schemars,"json-schema, rust, serde",1564850757000,1564933709000,1572178759000
+ulrack/json-schema,"php, json-schema, ulrack",1565038949000,1565038810000,1565126559000
+wyfo/apischema,"dataclasses, python-typing, json-api, json-schema, openapi, python, validation, pypy3, graphql, graphql-schema, graphql-server, json, json-schema-generator, graphql-python, graphql-relay, serialization",1565249596000,1565249595000,1599695572000
+marcosschroh/dataclasses-avroschema,"avro, apache-avro, avro-schemas, json-schema, pydantic, python3, serialization, schema, json, code-generation, model",1566944814000,1567090697000,1567091210000
+travishorn/csval,"csv, json-schema, cli, parser, data, validation",1568321339000,1568321368000,1568485723000
+alibaba/x-render,"javascript, react, ant-design, json-schema, formrender, widget, webpack, ant, typescript, table, chart, list, form",1569484707000,1569484706000,1571190033000
+saasquatch/json-schema-inferrer,"java, java-8, java-library, json-schema-inferrer, schemas, json, json-schema, jackson, json-schema-inference",1572038108000,1572038107000,1572537993000
+openapi4j/openapi4j,"openapi, openapi3, request-validator, java, schema-validator, openapi-specification, rest, parser, api, vertx, undertow, servlet, schema, json-schema, validation, request, graalvm",1572537358000,1572537575000,1573227394000
+jacksmith15/statham-schema,"json-schema, python, parsing, serialization, model",1572956315000,1572956235000,1576241106000
+simonkowallik/as3ninja,"gitops, devops, as3, rest-api, swagger, openapi, cli, python, vault, jinja2, json-schema",1572704551000,1573071458000,1573330953000
+karuppiah7890/helm-schema-gen,"helm-plugin, helm, golang, plugin, hacktoberfest, json-schema, helm-schema-gen, k8s, go",1577381063000,1573802393000,1577544028000
+GoodforGod/DummyMapper,"intellij-idea, intellij, intellij-plugin, plugin, mapping, mapping-tools, avro, avro-schema, graphql, graphql-schema, json, json-schema, json-mapping, code-tools, java, kotlin, pojo-to-avro, pojo-to-graphql, pojo-to-json",1573767156000,1573990856000,1597875973000
+sngular/kloadgen,"kafka, avro-schema, json-schema, load-testing, jmeter-plugin, java, protobuf, protocol-buffers",1574079309000,1574079308000,1593507338000
+swaggest/jsonschema-go,"json-schema, code-generation, hacktoberfest",1574667036000,1574667035000,1574716596000
+sarathm09/vibranium,"vibranium, nodejs, api, api-testing, api-testing-framework, data-generation, regression-testing, functional-testing, json-schema, testing-tools, json, node-js, assertions, vibranium-tests, testing-framework, test-automation, test-driven-development, test-framework",1574779847000,1574779857000,1589020258000
+leplusorg/docker-json,"jsonlint, docker-container, json, json-schema, jq, docker, dockerfile, docker-image, jsonwebtoken, jwt, jwt-token, jwt-tokens, jwt-bearer-tokens, json-manipulation, jose, jose-jwt, jason2yaml, json-to-yaml-convertor, json-to-yaml",1575398126000,1575398125000,1660465007000
+shipwell/json-yup,"json-schema, yup, validation, yup-json, swagger-schema, swagger-validate, formik-validation, json-yup, schema",1575909664000,1575907215000,1576077538000
+justarandomgeek/vscode-factoriomod-debug,"dap-server, debugger, factorio, factorio-tool, json-schema, lsp-server, vscode-extension",1441577783000,1576806019000,1576805849000
+cfworker/cfworker,"cloudflare, cloudflare-workers, cosmosdb, azure, jwt, auth0, sentry, service-workers, workers, json-schema, json-schema-validator",1577925397000,1577925439000,1637376327000
+swaggest/openapi-go,"openapi, openapi3, code-generation, json-schema, documentation-generator, hacktoberfest",1578309786000,1578355661000,1585869670000
+ui-schema/ui-schema,"ui-schema, json-schema, form-generator, ui-generator, react, widget, form-builder, material-ui, material, mui",1579379122000,1579379120000,1587330972000
+neilpa/yajsv,"json-schema, cli, golang, go, json, yaml",1579896100000,1579896718000,1579908357000
+json-schema-tools/meta-schema,"json-schema, types",1580177618000,1580177617000,1585949014000
+CalumD/Java-JSON,"java, json, json-schema, json-schema-validator",1581195490000,1580687217000,1598822854000
+grantila/suretype,"typescript, json-schema, validator, json",1581377843000,1581377810000,1616358137000
+NLESC-JCER/cpp2wasm,"json-schema, cgi-scripts, web-assembly, pybind11, guide",1581953545000,1581953543000,1591261410000
+NLESC-JCER/cpp2wasm,"json-schema, cgi-scripts, web-assembly, pybind11, guide",1581953545000,1581953543000,1591261410000
+cappyzawa/concourse-pipeline-jsonschema,"concourse-pipeline, concourse, json-schema",1583395953000,1583393929000,1598020579000
+danielgtaylor/huma,"golang-library, openapi3, json-schema, documentation, openapi-server, api, rest, web, framework, swagger-ui, huma, hacktoberfest, openapi, rest-api, golang, openapi31, fastapi",1583648526000,1583648391000,1645558455000
+CIEPS/json-schema-himarc,json-schema,1584444635000,1584444633000,1643297253000
+jsonschema2dataclass/js2d-gradle,"json, json-schema, gradle-plugin, generator, models, model-generator, jsonschema2pojo, java, pojo, pojo-builder",1584630819000,1585859966000,1614599420000
+ssilverman/rdm-schema,"rdm, rdm-schema, json-schema, manufacturer-messages",1586846101000,1586215752000,1586847716000
+umijs/sula,"sula, sula-cooker, sula-builder, sula-real, umi, json-schema",1586875196000,1586870872000,1589428320000
+adrijshikhar/darkdev,"vscode, vscode-extension, vscode-theme, vscode-settings, json, json-schema",1587042130000,1587042129000,1587063295000
+marksparkza/jschon,"json, json-schema, json-patch, json-pointer",1588196630000,1587304546000,1617145163000
+ph-fritsche/liform,"symfony-bundle, json-schema, forms, symfony-form",1456437140000,1588584205000,1591580334000
+mostafa/xk6-kafka,"k6, kafka, apache-kafka, load-testing, performance-testing, avro, extension, xk6, jsonschema, json-schema, sasl, schema-registry",1589029984000,1589029984000,1605800650000
+Eomm/json-schema-resolver,"json-schema-resolver, json-schema, definitions, ref, fastify",1589094869000,1589094868000,1589642876000
+francescozanoni/openapi-json-schemextractor,"openapi, json-schema, swagger, converter, extractor",1589371282000,1589371281000,1590485159000
+lljj-x/vue-json-schema-form,"vue, jsonschema, elementui, json-schema, form, h5-editor, antdv, vue3, elementplus",1589520853000,1589520853000,1592817666000
+danielgtaylor/restish,"cli, rest, rest-client, openapi3, json-schema, http2, json, cbor, msgpack, brotli, gzip, yaml, oauth2, swagger, hypermedia, fastapi, auth, auth0, hacktoberfest, openapi31",1589525091000,1589525159000,1590729912000
+italia/form-pa,"json-schema, docker, form-pa, hacktoberfest",1589886018000,1589891469000,1601461563000
+johnbillion/wp-json-schemas,"json-schema, wordpress, typescript-definitions, typescript, rest-api",1590231410000,1590231345000,1619384454000
+KVikram/mybrand,"angular7, angular-material, typescript, personal-website, angular, flex-layout, json-schema, pwa, responsive-web-design, portfolio-site",1590235930000,1590235929000,1592122855000
+ssilverman/snowy-json,"json-schema, validator, linter, json-validator, json-schema-validator",1588825678000,1590396749000,1590656563000
+ryparker/jest-schema-matcher,"jest, matcher, json-schema, api-test, jest-schema-matcher",1590590909000,1590590908000,1592835941000
+nasa-gcn/gcn-schema,"astronomy, json-schema, kafka, json",1592236667000,1592236666000,1692649592000
+k0swe/adif-json-protobuf,"amateur-radio, json, json-schema, protobuf, adif",1594186712000,1594186936000,1602179431000
+jcoreio/typescript-validators,"api, assertion, assert, defensive-programming, json, json-schema, js-schema, object-schema, runtime-types, schema, type, types, typescript, validate, validation, validation-schema, validator",1573100706000,1594520579000,1594659699000
+ThomasAribart/json-schema-to-ts,"json-schema, typescript, json, type, schema, ts",1594736026000,1594735944000,1683647952000
+product-os/autumndb,"json-schema, postgres, graph-database",1594780611000,1594780609000,1619615288000
+ajv-validator/ajv-formats,"json-schema, ajv, formats",1595240509000,1595240508000,1595362900000
+Luncher91/A2LParser,"a2l, asam-mcd-2mc, asam, asap-2, calibration, parser, a2l-files, json, json-schema, java, asap2, antlr4, antlr4-grammar, antlr4-java, csharp, automotive, parsing",1595257453000,1595257452000,1606670308000
+comuns-rpgmaker/plugin-metadata,"rpgmakermz, rpgmaker, plugin, metadata, json-schema",1598826376000,1598826457000,1598840489000
+RalfG/jsonschema2md,"json-schema, markdown, documentation, python",1598862509000,1598862507000,1598890882000
+SchemaModule/PowerShell,"json-schema, schemaobject, powershell",1599578662000,1599578660000,1599688868000
+valentinpalkovic/prisma-json-schema-generator,"prisma, json-schema, prisma2, prisma-schema, prisma-generator",1600594571000,1600594570000,1600930023000
+viczaca/react-json-schema-builder,"reactjs, reactjs-components, json-schema, react, json, schema, builder, tailwindcss, typescript, react-components",1602774796000,1603097087000,1603724824000
+swaggest/rest,"openapi, openapi3, rest-api, json-schema, golang, go, swagger, hacktoberfest",1603304988000,1603304176000,1603702297000
+ThomasPokorny/Json2Pojo,"js, json, json-converter, pojobuilder, pojo, json-schema, code-generation, lightweight",1603311267000,1603311266000,1603997058000
+open-code-modeling/json-schema-to-php,"json, schema, php, parser, json-schema",1603310298000,1603395441000,1605884133000
+open-code-modeling/json-schema-to-php-ast,"json-schema, php-ast, php, json, schema, abstract-syntax-tree, ast, code-generation, code-generator, value-object",1603449986000,1603451067000,1605871976000
+Blockception/Minecraft-bedrock-json-schemas,"minecraft, bedrock, json, json-validation, json-schema, minecraft-bedrock, animation-controllers, snippets, hacktoberfest, open-source, contributions-welcome, hacktoberfest2022",1604247355000,1604247354000,1689431489000
+Marcisbee/esjson,"json, schema, json-schema, validator, json-schema-validator, cli, hacktoberfest",1605023096000,1605023094000,1605192692000
+rsksmart/vc-json-schemas,"w3c, did, vc, json-schema",1605547022000,1605546997000,1605859563000
+erosb/json-sKema,"json-schema, json-schema-validator",1605905388000,1605905460000,1681154752000
+vidispine/hull,"helm, helm-charts, helm-chart, helm-plugin, helm-plugins, helm-deployment, helm-interface, helm-wrapper, helm3, json-schema, kubernetes, dry, k8s, k8s-deployment",1607959122000,1606999780000,1614557557000
+kstasik/schema-tools,"json, json-schema, openapi, openapi3",1607292373000,1607273336000,1607641030000
+majidgolshadi/input-validator,"input-validation, plugin, java, microservice, api, api-rest, json-schema, spring-boot, spring",1608228649000,1608227883000,1608232475000
+jcoreio/typed-validators,"api, assertion, assert, defensive-programming, flow, flowtype, json, json-schema, js-schema, object-schema, runtime-types, schema, type, types, typescript, validate, validation, validation-schema, validator",1573100706000,1609544059000,1609544928000
+DP6/penguin-datalayer,"dp6, gtm, datalayer, raft-suite, json-schema, data-quality, data-quality-checks, hacktoberfest, nodejs",1610050559000,1610049733000,1618837862000
+python-jsonschema/check-jsonschema,"json-schema, pre-commit, cli, python",1610083847000,1610084134000,1678376876000
+asyncapi/modelina,"json-schema, asyncapi, codegen, codegenerator, typescript, hacktoberfest, openapi2, openapi3, swagger, cpp, csharp, generate-code, java, kotlin, php, rust, go, modelina",1611232073000,1611232071000,1611659293000
+jcrist/msgspec,"msgpack, serialization, json, python, validation, deserialization, messagepack, json-schema, schema, serde, jsonschema, yaml, toml, openapi3",1611629442000,1611629637000,1614091768000
+ota-meshi/eslint-plugin-json-schema-validator,"json-schema, eslint-plugin, eslintplugin, eslint, json, jsonc, json5, yaml, toml, validation, validator",1612861827000,1612861825000,1613655346000
+azu/create-validator-ts,"typescript, json-schema, validator, runtime, check",1612884388000,1612884565000,1612885341000
+Coobaha/typed-fastify,"fastify, json-schema, typescript, validation, types, schema-generation, schema",1613575259000,1613573125000,1613673982000
+nextflow-io/nf-validation,"json-schema, nextflow, plugin, samplesheet, validation",1613679326000,1613678405000,1683286890000
+fastify/ajv-compiler,"fastify, fastify-library, ajv, ajv-validation, json-schema",1613723580000,1613723578000,1619165413000
+StefanTerdell/zod-to-json-schema,"zod, json-schema",1614202518000,1614202437000,1659678458000
+DP6/penguin-datalayer-core,"data-quality, data-quality-checks, datalayer, gtm, dp6, json-schema, penguin-datalayer, camada-de-dados, marketing-automation, hacktoberfest",1614285644000,1614285643000,1614717248000
+linkml/linkml-model,"linkml, semantic-web, json, json-schema, graph-ql, metamodel, yaml, data-integration, metadata, uml, schema-language, data-modeling, shacl, shex, linked-data",1615747048000,1615747047000,1616178496000
+linkml/linkml,"rdf, modeling, linkml, json-schema, linkml-schema, semantic-web, schema, data-modeling, json-ld-context, owl, data-dictionaries, linked-data, hacktoberfest, standards, shex, shacl",1615913028000,1615912483000,1616606765000
+appliedengdesign/cnccodes-json-schema,"cnc, gcode, json, json-schema, reference",1615913384000,1615913383000,1656549102000
+ar-nelson/spartan-schema,"json, json-schema, schema",1616121060000,1616125076000,1658931191000
+pskd73/pydictable,"python, serializer, json-schema, schema-validation, deserializer",1617137734000,1617137734000,1617230597000
+wtask-go/mixpanel,"mixpanel, golang, go, openapi, json-schema, openapi3, event-tracking, ingestion-api",1617376550000,1617376549000,1617992314000
+ghandic/jsf,"jsf, json-schema, commandline, faker, property-based-testing, python, fastapi",1617896982000,1617896967000,1617897574000
+PnX-SI/schema_randonnee,"json, open-data, json-schema, trekking, tourism",1617963970000,1617961690000,1628168867000
+Onemind-Services-LLC/kubernetes-json-schema,"kubernetes, json-schema, kubeval",1497801809000,1619792244000,1619797893000
+javalin/javalin-openapi,"javalin, openapi, javalin-openapi, annotation-processor, swagger-ui, swagger, openapi3, redoc, javalin-plugin, hacktoberfest, json-schema",1620144653000,1620144652000,1668536636000
+plexinc/papr,"mongodb, schema, json-schema, typescript, validation",1617897323000,1620654375000,1689081412000
+event-driven-dotnet/EventDriven.SchemaRegistry.Mongo,"schema, validation, json-schema, mongodb, pubsub, microservices",1620961179000,1620769994000,1621008836000
+uderline/openapi-php-attributes,"json, api, api-rest, php, php8, attributes, openapi3, openapi, renderer, swagger, json-schema",1622996562000,1622998788000,1642010182000
+LukasMasuch/streamlit-pydantic,"streamlit, streamlit-component, python, pydantic, forms, json-schema, typing, type-hints, dataclasses, streamlit-library",1625871812000,1625871811000,1625885346000
+johngeorgewright/runtyping,"typescript, json-schema, runtypes, zod, io-ts",1626095271000,1626095267000,1626163989000
+GiovanniCardamone/class-schema,"json-schema, typescript, nodejs, browser",1627815036000,1627815036000,1649714903000
+IQ-tech/firebolt,"forms, react, package, json-schema",1629496360000,1629496318000,1633529985000
+tiangolo/sqlmodel,"python, sql, sqlalchemy, pydantic, fastapi, json, json-schema",1629808913000,1629815213000,1629829555000
+bhch/django-jsonform,"django, json-schema, admin, json-form, python",1630132520000,1630130330000,1630604569000
+maxfordham/ipyautoui,"ipywidgets, json-schema, jupyter, pydantic, python, ui",1630753509000,1630591713000,1655374448000
+akmjenkins/json-schema-rules-engine,"rules, json, rules-engine, engine, rules-processor, business-rules, rule-engine, json-rules-engine, json-schema, json-schema-validator",1630632949000,1630633020000,1630892205000
+yassun7010/serde_valid,"json-schema, rust, serde, validation",1613833663000,1630647342000,1690695497000
+akmjenkins/json-modifiable,"json, json-schema, rules-engine, json-pointer, json-patch, descriptors",1631540028000,1631539937000,1631581525000
+monomonedula/nvelope,"json, json-schema, json-serialization, marshalling, unmarshalling, json-deserialization, python3",1633514810000,1633514809000,1637696248000
+kickstartDS/storybook-addon-jsonschema,"storybook-addon, data-state, json, json-schema, jsonschema, controls, addon-controls, react, storybook",1634234578000,1634234576000,1634501365000
+micronative/event-schema,"microservices, event-schema, json-schema",1634357050000,1634366623000,1662350580000
+corvus-dotnet/Corvus.JsonSchema,"json-schema, json-schema-validator",1637150102000,1637150101000,1653492691000
+lexiq-legal/pydantic_schemaorg,"pydantic, pydantic-models, schema-org, fastapi, django, schemas, autogenerated, dataclasses, seo-optimization, seo, python3, json-ld, schema, json-schema",1638198941000,1638197519000,1638289005000
+HoseungJang/request-typer,"typescript, json-schema, openapi, validation",1638695567000,1638695488000,1639587209000
+cardinalby/schema-validator-action,"json-schema, schema, schemasafe, validation, validator, yaml",1640730953000,1640721537000,1640792816000
+triggerdotdev/schema-infer,"json, json-schema",1640815688000,1640815687000,1642163845000
+yeshan333/ApacheJmeter_Schema_Assertion,"jmeter-plugin, jmeter-assertion, json-schema, yaml-schema, apache-jmeter",1642217353000,1642173496000,1643206250000
+simonireilly/compeller,"json-schema, openapi, openapi3, schema, swagger",1643137485000,1643136248000,1643264816000
+lefticus/json2cpp,"cpp, cpp17, json, json-schema",1643642972000,1643642970000,1644505300000
+ZenWave360/json-schema-ref-parser-jvm,"json-schema, json-pointer, resolver, java",1643742978000,1643742977000,1644655806000
+PlasmoHQ/bpp,"chrome-extension, chrome-extensions, web-extensions, browser-extension, browser-extensions, continuous-deployment, continuous-integration, actions, json-schema, firefox-addon, edge-addon, opera-addon",1644290445000,1644290443000,1644877772000
+eropple/fastify-openapi3,"fastify, fastify-plugin, openapi3, typescript, json-schema",1644816182000,1644816269000,1648337572000
+DZakh/rescript-json-schema,"rescript, json-schema, typesafe, json, openapi, swagger, ajv",1645819728000,1645819728000,1652545669000
+AsaiYusuke/6502_test_executor,"6502, 6502-emulation, unit-testing, json-schema, nes-dev, cross-platform, assembly, assembly-6502, coverage, coveralls, lcov",1386370807000,1646070389000,1648015323000
+Bwc9876/menagerie,"python, jinja2, markdown, docs, json-schema, xml-schema, yaml-schema, html, css, js, documentation, static-site-generator",1647255565000,1647255547000,1650050514000
+jdhitsolutions/PSProjectStatus,"powershell, powershell-module, json-schema, powershell-classes",1643926792000,1647356962000,1647437739000
+pydantic/pydantic-core,"json-schema, parsing, pydantic, rust, schema, validation",1649105772000,1649111815000,1659531934000
+holgerjh/genjsonschema-cli,"cli, json, json-schema, yaml",1649177133000,1649177132000,1650922699000
+jsstevenson/oxley,"json-schema, pydantic, python",1649726423000,1649731078000,1657162260000
+FurtherBank/json-schemaeditor-antd,"ant-design, antd, json, json-schema, react, json-editor",1644563282000,1649751630000,1649769225000
+mathiasrichter/shapiro,"json-ld, model-as-code, turtle, shacl, data, data-structures, linked-data, rdf, schema, semantic, semantic-web, json-schema, sparql, openapi",1650013888000,1650013887000,1664569078000
+creek-service/creek-json-schema,json-schema,1650833143000,1650833142000,1667762240000
+mkon/openapi_contracts,"openapi, redoc, rspec, swagger, json-schema, ruby",1651302828000,1651333641000,1651603537000
+kevinmarrec/h3-typebox,"h3, hacktoberfest, typebox, json-schema",1654363255000,1654362806000,1655037138000
+it-at-m/digiwf-core,"camunda, json-schema, spring-boot, vuejs, digiwf",1654787092000,1654787090000,1660210919000
+bnomei/kirby3-schema,"autocompletion, blueprint, json-schema, phpstorm, validation, vscode, yaml, kirby, kirby-cms",1656160766000,1656160765000,1656980153000
+copper-leaf/kotlin-json-forms,"compose, forms, json-schema, kotlin",1657128746000,1657201222000,1657834324000
+ycsky98/Json-Schema-Calibrator,"json, json-schema, schema",1657250217000,1657250217000,1675860045000
+stephenberry/glaze,"api, binary, cplusplus, cpp, interface, json, serialization, reflection, header-only, json-rpc2, fast, csv, json-schema, beve",1657885951000,1657885950000,1665748358000
+xshapira/dantico,"django, pydantic, python, django-orm, json-schema, fastapi, pydantic-django",1658407974000,1658407935000,1658487979000
+inrae/pgd-mmdt,"data, json, json-schema, metadata, project-management, repository, api, ontology, vocabulary, web",1696047943000,1659514210000,1675075769000
+nomasystems/ndto,"erlang, schema, json-schema, openapi",1659705577000,1659705556000,1694183808000
+JulianCataldo/remark-lint-frontmatter-schema,"lint, ajv, frontmatter, json-schema, linter, linting, remark, remarkjs, rule, tooling, unified, validation, vscode, yaml, markdown, astro, gatsby",1659732566000,1659732419000,1659734530000
+disneystreaming/smithy-translate,"json-schema, openapi, protobuf, smithy, swagger",1667250477000,1660060528000,1667317830000
+skyleague/therefore,"json-schema, skyleague, typescript",1660552954000,1660292185000,1660565274000
+jacob-alford/schemata-ts,"deserialization, json-schema, parser, serialization, validator, camelcase-keys",1662679307000,1662679502000,1663206312000
+KevinZhang19870314/v-formly,"vue, ajv-validation, ant, antdesignvue, form, json-schema, vue2, vuejs, formly, vue-formly, v-formly",1663035480000,1663234303000,1665997342000
+Kobee1203/schema-org-java,"generator, java, json, json-ld, json-schema, maven, maven-plugin, schema, schema-org, seo, java-model, model, pojo, serializer, entity",1663961310000,1663961309000,1667397137000
+openapi-json-schema-tools/openapi-json-schema-generator,"hacktoberfest, hacktoberfest2022, java, json-schema, openapi, openapi-generator, openapi3, python3, code-generation, python, openapi31, draft2020-12, schema-validation, help-wanted, jsonschema, openapi-specification, rest, draft5",1309963516000,1664693279000,1664842828000
+moutinhofuturedev/paulomoutinho,"chakra-ui, next, react, react-icons, vercel, seo-optimization, javscript, json-schema, sitemap",1665082382000,1665082439000,1675562126000
+mosparo/specifications,"mosparo, json-schema, spam-detection",1665305618000,1665305577000,1665307048000
+KevinZhang19870314/v-formly-v3,"vue, vuejs, ajv, ajv-validation, form, form-validation, json, json-schema, ant, antdesign, ant-design-vue, v-formly, vue-formly, v-formly-v3, dynamic, element, element-ui, element-plus, dynamic-forms, vue-3",1665974703000,1665970999000,1667371202000
+imjuni/schema-nozzle,"cli, json, json-schema, jsonschema, schema, tools, ts, typescript",1665983837000,1665983836000,1676567102000
+dymmond/esmerald,"api, json, python, framework, web, async, asyncio, openapi, openapi3, pydantic, python3, redoc, rest, security, uvicorn, python-types, starlette, json-schema, swagger-ui, swagger",1666170527000,1666093826000,1666713588000
+ts-oas/ts-oas,"oas, openapi, typescript, json-schema, swagger",1667162066000,1667162206000,1667333258000
+python-jsonschema/referencing,"jsonschema, asyncapi, hypermedia, json, openapi, api, json-schema",1669068666000,1669073170000,1669130020000
+python-jsonschema/jsonschema-specifications,"jsonschema, json, specifications, validation, json-schema",1672163253000,1672169269000,1672170480000
+hexagontk/codecv,"json, json-schema, yaml, kotlin, toml, cv, resume, graalvm-native-image, hacktoberfest",1673204800000,1673204881000,1673205104000
+jy95/docusaurus-json-schema-plugin,"docusaurus, docusaurus-plugin, docusaurus-theme, json-schema, json-schema-documentation, json-schema-editor, json-schema-viewer, hacktoberfest, hacktoberfest-accepted",1673289471000,1673289469000,1675209514000
+NASA-AMMOS/seq-json-schema,"aerospace, json-schema, schema, sequencing, spacecraft, nasa, planning, multi-mission, modeling, command, sequence",1674105962000,1674092934000,1676588570000
+redmer/yarrrml-json-schema,"json-schema, linked-data, r2rml, yarrrml",1674914986000,1674914985000,1675116708000
+nuxodin/jema.js,"fast, json-schema, json-schema-validator, v2020-12, validator",1675359327000,1675359326000,1679598360000
+harrel56/json-schema,"json, json-schema, jsonschema, schema, java, validation, validator",1675714174000,1675714154000,1685654077000
+ugol/jr,"avro, datagen, json-schema, kafka, kafka-producer, protobuf, random-generation, redis, schema-registry, template, mongodb",1676148582000,1676148581000,1681769861000
+tiddly-gittly/super-tag,"fields, form, form-editor, json-form, json-schema, supertag, tiddlywiki, tiddlywiki-plugin, tiddlywiki5, knowledge-graph, note-taking, notes-app, ontology, semantic-web, todoapp",1676642733000,1676642730000,1676796655000
+ardatan/feTS,"fetch, fetch-api, json-schema, openapi, swagger, typescript, whatwg, whatwg-fetch, zod",1678194857000,1677754252000,1678227319000
+scjorge/pydantic_br,"pydantic, python, hints, json-schema, fastapi, json, brasil, brazil, cnpj, cpf, cnh, schema, validacao-de-cnpj, validacao-de-cpf, validation",1679923168000,1679923167000,1680401146000
+getsentry/json-schema-diff,"breaking-changes, json-schema, schema, tag-non-production",1679942070000,1679952673000,1680030595000
+cyclops-ui/cyclops,"helm, kubernetes, kubernetes-operator, aks, cloud, crd-controller, devops, eks, gke, kubernetes-cluster, kubernetes-controller, platform-engineering, json-schema",1680394145000,1680394144000,1691519740000
+webeetle/JRPC-Server,"json, json-api, json-rpc, json-schema, json-server, javascript, typescript",1680618525000,1680618505000,1680682438000
+Fatal1ty/openapify,"api, jsonschema, openapi, openapi31, openapi-generator, openapi-specification, json-schema, dataclasses, python, rest-api, http-api, swagger, documentation, openapi3",1681048969000,1681075159000,1681325790000
+samchungy/zod-openapi,"openapi, swagger, typescript, zod, json-schema, openapi3, zod-openapi",1679344442000,1681540131000,1681545229000
+nearform/openapi-transformer-toolkit,"json-schema, npm, openapi, typescript",1682495110000,1682495106000,1683106209000
+skryukov/json_skooma,"hacktoberfest, ruby, json-schema",1695762113000,1684267752000,1695762113000
+6r17/madtypes,"json-schema, python3, typing",1685139611000,1685138785000,1685147398000
+flodlc/http-wizard,"api, client, fastify, js, typebox, typescript, json-schema, zod, react-query, tanstack-query",1685824082000,1685820779000,1687707750000
+webgme/svelte-jsonschema-form,"json-schema, svelte, web-component, web-forms, webgme",1684956431000,1686166080000,1690319208000
+lyubick/action-YAML-schema-validator,"json-schema, jsonschema-validator, python, python3, yaml, actions, json, json-validation, json-validator, jsonschema, jsonschema-validation",1686579142000,1686579142000,1686647820000
+zmievsa/cadwyn,"api, api-versioning, fastapi, pydantic, stripe, code-generation, versioning, hints, json-schema, python, python310, python311, python312",1686597255000,1686597238000,1708961739000
+udamir/allof-merge,"allof, json, json-schema, merge, si, simplicity",1687020041000,1686998741000,1689707830000
+neomutt/lsp-tree-sitter,"json-schema, language-server-protocol, tree-sitter",1687185522000,1687187055000,1698339450000
+siyuan-community/siyuan-sdk,"json-schema, nodejs, sdk, siyuan, siyuan-note, type",1687425505000,1687425505000,1687710857000
+acao/codemirror-json-schema,"codemirror-mode, codemirror6, json-schema, json, json5",1688985471000,1688985590000,1689777479000
+simonuwe/oracle-apex-json-region,"json, json-schema, oracle-apex-plugin",1691497742000,1691497742000,1692967041000
+withcatai/node-llama-cpp,"ai, bindings, catai, llama, llama-cpp, llm, nodejs, prebuilt-binaries, grammar, gguf, cuda, metal, json-schema, cmake, cmake-js, self-hosted",1691874230000,1691873596000,1691878621000
+json-schema-form-element/jsfe,"form, json-schema, lit, react, shoelace, solid, vue, web-component, reactjs, sveltejs, form-builder, form-generator, form-validator, material",1695290062000,1695288889000,1697062227000
+CQCL/phir,"json-schema, python, quantum-computing, quantinuum",1695370899000,1695370964000,1697493708000
+astrohelm/metaforge,"astrohelm, javascript, metadata, metalanguage, nodejs, runtime-verification, schema, types, zero-dependencies, checker, dsl, json, testing, validation, generator, lightweight, modular, modular-design, modules-architecture, json-schema",1696876725000,1696876722000,1697463339000
+losisin/helm-values-schema-json,"helm-plugin, json-schema, json-schema-generator, helm, helm-chart, helm-charts, helm-plugins, schema-json",1698138983000,1698138821000,1698178662000
+runtime-env/runtime-env,"json-schema, twelve-factor, runtime-config, 12-factor-app, docker",1698627748000,1698627642000,1699083167000
+losisin/helm-values-schema-json-action,"config, github-action, github-actions, helm, schema-json, json-schema",1699018948000,1699009396000,1699463368000
+alvesvaren/zod-to-openai-tool,"json-schema, openai, openai-functions, zod, openai-assistants-api, openai-chat, openai-tools",1700074849000,1700074937000,1701173536000
+dsanders11/json-schema-validate-action,"github-actions, json-schema",1703756626000,1703756623000,1703829657000
+Archerxy/archer-xjson,"json, json-schema",1703814230000,1703814230000,1706758759000

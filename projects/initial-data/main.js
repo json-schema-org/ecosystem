@@ -1,19 +1,53 @@
 import { Octokit } from 'octokit';
-import cheerio from 'cheerio';
 import { getInput } from './setup.js';
 
 import { DataRecorder } from './dataRecorder.js';
 
-const WAYBACK_API_URL = 'http://archive.org/wayback/available';
 const CSV_FILE_NAME = `initialTopicRepoData-${Date.now()}.csv`;
 
-async function fetchRepoCreationDate(octokit, owner, repo) {
+export async function fetchRepoCreationDate(octokit, owner, repo) {
   console.log(`Fetching creation date for repository: ${owner}/${repo}`);
   const response = await octokit.request('GET /repos/{owner}/{repo}', {
     owner,
     repo,
   });
-  return response.data.created_at;
+  return Date.parse(response.data.created_at);
+}
+
+async function fetchFirstCommitDate(octokit, owner, repo) {
+  console.log(`Fetching first commit date for repository: ${owner}/${repo}`);
+  try {
+    const response = await octokit.request('GET /repos/{owner}/{repo}/commits', {
+      owner,
+      repo,
+      per_page: 1,
+    });
+
+    const lastPageUrl = response.headers.link?.match(
+      /<([^>]+)>;\s*rel="last"/,
+    )?.[1];
+
+    if (!lastPageUrl) {
+      if (response.data.length > 0) {
+        response.data[0].commit.author.date;     
+      } 
+      else {
+        throw new Error(`No commits found for ${owner}/${repo}`); //TODO: check if this is the correct error message
+      }
+    }
+    
+    const lastPageResponse = await octokit.request(lastPageUrl);
+
+    if (lastPageResponse.data.length > 0) {
+      return Date.parse(lastPageResponse.data[0].commit.author.date);     
+    } else {
+      console.error('Error occured');
+      throw new Error(`No commits found ${owner}/${repo}`);  //TODO: check if this is the correct error message
+    } 
+  }
+  catch(err) {
+    throw new Error(`Could not find any commits for ${owner}/${repo}`); //TODO: check if this is the correct error message
+  }
 }
 
 async function fetchRepoTopics(octokit, owner, repo) {
@@ -27,103 +61,77 @@ async function fetchRepoTopics(octokit, owner, repo) {
 
 async function fetchFirstReleaseDate(octokit, owner, repo) {
   console.log(`Fetching first release date for repository: ${owner}/${repo}`);
-  const response = await octokit.request('GET /repos/{owner}/{repo}/releases', {
-    owner,
-    repo,
-    per_page: 1,
-  });
-  const lastPageUrl = response.headers.link?.match(
-    /<([^>]+)>;\s*rel="last"/,
-  )?.[1];
+  try {
+    const response = await octokit.request('GET /repos/{owner}/{repo}/releases', {
+      owner,
+      repo,
+      per_page: 1,
+    });
+    const lastPageUrl = response.headers.link?.match(
+      /<([^>]+)>;\s*rel="last"/,
+    )?.[1];
 
-  if (!lastPageUrl) {
-    return response.data.length > 0 ? response.data[0].created_at : null;
+    if (!lastPageUrl) {
+      if (response.data.length > 0) {
+        response.data[0].created_at;
+      } 
+      else {
+        throw new Error(`No releases found for ${owner}/${repo}`); //TODO: check if this is the correct error message
+      }
+    }
+
+    const lastPageResponse = await octokit.request(lastPageUrl);
+    if (lastPageResponse.data.length > 0) {
+      return Date.parse(lastPageResponse.data[0].created_at);
+    }
+    else {
+      throw new Error(`No releases found for ${owner}/${repo}`); //TODO: check if this is the correct error message
+    }
   }
-
-  const lastPageResponse = await octokit.request(lastPageUrl);
-  return lastPageResponse.data.length > 0
-    ? lastPageResponse.data[0].created_at
-    : null;
+  catch(err) {
+    console.error('Error occured');
+    throw new Error(`Unable to get releases for ${owner}/${repo}`); //TODO: check if this is the correct error message
+  }
 }
 
-async function fetchWaybackSnapshot(url, timestamp) {
-  console.log(
-    `Fetching Wayback Machine snapshot for URL: ${url} at timestamp: ${timestamp}`,
-  );
-  console.log(`${WAYBACK_API_URL}?url=${url}&timestamp=${timestamp}`);
-  const response = await fetch(
-    `${WAYBACK_API_URL}?url=${url}&timestamp=${timestamp}`,
-  );
-  const data = await response.json();
-  return data.archived_snapshots;
-}
-
-async function checkTopicInPage(url, topic) {
-  console.log(`Checking if topic "${topic}" exists in page: ${url}`);
-  const response = await fetch(url);
-  const html = await response.text();
-  const $ = cheerio.load(html);
-  return $(`a.topic-tag-link:contains('${topic}')`).length > 0;
-}
-
-async function processRepository(octokit, owner, repo, topic) {
+export async function processRepository(octokit, owner, repo) {
   console.log(`Processing repository: ${owner}/${repo}`);
   const githubRepoURL = `https://github.com/${owner}/${repo}`;
 
   const creationDate = await fetchRepoCreationDate(octokit, owner, repo);
-  const firstReleaseDate = await fetchFirstReleaseDate(octokit, owner, repo);
+  let firstReleaseDate;
+  try {
+    firstReleaseDate = await fetchFirstReleaseDate(octokit, owner, repo);
+  }
+  catch(err) {
+    throw new Error(`Unable to get releases for ${owner}/${repo}`);  
+  }
   const repoTopics = await fetchRepoTopics(octokit, owner, repo);
+
+  let firstCommitDate;
+  try {
+    firstCommitDate = await fetchFirstCommitDate(octokit, owner, repo);
+  }
+  catch(err) {
+    throw new Error(`Error trying to find first commit for ${owner}/${repo}`);
+  }
+  console.log({ firstReleaseDate });
 
   if (firstReleaseDate === null) {
     console.log(`First release date: of ${githubRepoURL} unknown`);
   }
-
-  const dateTypes = [
-    ['creation', creationDate],
-    ...(firstReleaseDate !== null ? [['release', firstReleaseDate]] : []),
-  ];
-  console.log({ dateTypes });
-
-  const dataSets = dateTypes.map(async ([dateType, isoDate]) => {
-    if (isoDate) {
-      console.log(`Processing ${dateType} date: ${isoDate}`);
-      const date = new Date(isoDate);
-      const datestamp = date.getTime();
-      const archivedSnapshots = await fetchWaybackSnapshot(
-        githubRepoURL,
-        datestamp,
-      );
-      if (Object.keys(archivedSnapshots).length === 0) {
-        console.log(`Unable to find archive for ${githubRepoURL}`);
-      } else {
-        const archiveUrl = archivedSnapshots.closest.url;
-        if (archiveUrl) {
-          const topicExists = await checkTopicInPage(archiveUrl, topic);
-          return {
-            [`datestamp_${dateType}`]: datestamp,
-            [`archiveUrl_${dateType}`]: archiveUrl,
-            [`topicExists_${dateType}`]: topicExists,
-          };
-        } else {
-          console.error(
-            `Couldn't get closest archive URL given response from ${githubRepoURL}`,
-          );
-        }
-      }
-    }
-  });
-
-  const combinedData = await Promise.all(dataSets);
-
-  const singleRowData = combinedData.reduce(
-    (acc, cur) => {
-      if (cur) {
-        return { ...acc, ...cur };
-      }
-      return acc;
-    },
-    { repository: `${owner}/${repo}`, repoTopics: `"${repoTopics.join(',')}"` },
-  );
+  
+  if (firstCommitDate === null) {
+    console.log(`First commit date: of ${githubRepoURL} unknown`);
+  }
+  
+  const singleRowData = {
+    repository: `${owner}/${repo}`,
+    repoTopics: `"${repoTopics.join(', ')}"`,
+    date_first_commit: firstCommitDate,
+    creation: creationDate,
+    date_first_release: firstReleaseDate, // firstReleaseDate is null if no releases. allowed it because it is appropriate
+  };
 
   return singleRowData;
 }
@@ -149,6 +157,7 @@ async function main(token, topic, numRepos) {
           repo.owner.login,
           repo.name,
         );
+
         dataRecorder.appendToCSV(Object.values(dataRow));
         processedRepos++;
         console.log(`processed ${processedRepos}`);
@@ -156,10 +165,10 @@ async function main(token, topic, numRepos) {
         console.error(err);
       }
     }
-
-    if (numRepos !== -1 && processedRepos >= numRepos) break;
   }
-}
+
+};
+
 
 export function runMain() {
   const { token, topic, numRepos } = getInput();
