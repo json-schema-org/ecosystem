@@ -107,6 +107,7 @@ export async function processRepository(octokit, owner, repo) {
     throw new Error(`Unable to get releases for ${owner}/${repo}`);  
   }
   const repoTopics = await fetchRepoTopics(octokit, owner, repo);
+
   let firstCommitDate;
   try {
     firstCommitDate = await fetchFirstCommitDate(octokit, owner, repo);
@@ -115,6 +116,7 @@ export async function processRepository(octokit, owner, repo) {
     throw new Error(`Error trying to find first commit for ${owner}/${repo}`);
   }
   console.log({ firstReleaseDate });
+
   if (firstReleaseDate === null) {
     console.log(`First release date: of ${githubRepoURL} unknown`);
   }
@@ -141,10 +143,9 @@ async function main(token, topic, numRepos) {
     q: `topic:${topic}`,
     per_page: 100,
   });
-  console.log(iterator);
   let processedRepos = 0;
 
-  const dataRecorder = new DataRecorder(CSV_FILE_NAME);
+  const dataRecorder = new DataRecorder(`./data/${CSV_FILE_NAME}`);
 
   for await (const iteration of iterator) {
     const data = iteration.data;
@@ -156,15 +157,13 @@ async function main(token, topic, numRepos) {
           repo.owner.login,
           repo.name,
         );
-        console.log({ dataRow });
+
         dataRecorder.appendToCSV(Object.values(dataRow));
         processedRepos++;
         console.log(`processed ${processedRepos}`);
-      } 
-      catch (err) {
+      } catch (err) {
         console.error(err);
       }
-      if (numRepos !== -1 && processedRepos >= numRepos) break;
     }
   }
 
