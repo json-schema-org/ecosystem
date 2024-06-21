@@ -37,9 +37,6 @@ devDependencies:
   jest:
     specifier: ^29.7.0
     version: 29.7.0
-  memfs:
-    specifier: ^4.8.0
-    version: 4.8.0
   msw:
     specifier: ^2.2.10
     version: 2.2.10(typescript@5.3.2)
@@ -3922,13 +3919,6 @@ packages:
       tmpl: 1.0.5
     dev: true
 
-  /memfs@4.8.0:
-    resolution: {integrity: sha512-fcs7trFxZlOMadmTw5nyfOwS3il9pr3y+6xzLfXNwmuR/D0i4wz6rJURxArAbcJDGalbpbMvQ/IFI0NojRZgRg==}
-    engines: {node: '>= 4.0.0'}
-    dependencies:
-      tslib: 2.6.2
-    dev: true
-
   /merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
     dev: true
@@ -4570,10 +4560,6 @@ packages:
       typescript: '>=4.2.0'
     dependencies:
       typescript: 5.3.2
-    dev: true
-
-  /tslib@2.6.2:
-    resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
     dev: true
 
   /type-check@0.4.0:
