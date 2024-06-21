@@ -17,11 +17,14 @@ export async function fetchRepoCreationDate(octokit, owner, repo) {
 async function fetchFirstCommitDate(octokit, owner, repo) {
   console.log(`Fetching first commit date for repository: ${owner}/${repo}`);
   try {
-    const response = await octokit.request('GET /repos/{owner}/{repo}/commits', {
-      owner,
-      repo,
-      per_page: 1,
-    });
+    const response = await octokit.request(
+      'GET /repos/{owner}/{repo}/commits',
+      {
+        owner,
+        repo,
+        per_page: 1,
+      },
+    );
 
     const lastPageUrl = response.headers.link?.match(
       /<([^>]+)>;\s*rel="last"/,
@@ -29,23 +32,21 @@ async function fetchFirstCommitDate(octokit, owner, repo) {
 
     if (!lastPageUrl) {
       if (response.data.length > 0) {
-        response.data[0].commit.author.date;     
-      } 
-      else {
+        response.data[0].commit.author.date;
+      } else {
         throw new Error(`No commits found for ${owner}/${repo}`); //TODO: check if this is the correct error message
       }
     }
-    
+
     const lastPageResponse = await octokit.request(lastPageUrl);
 
     if (lastPageResponse.data.length > 0) {
-      return Date.parse(lastPageResponse.data[0].commit.author.date);     
+      return Date.parse(lastPageResponse.data[0].commit.author.date);
     } else {
       console.error('Error occured');
-      throw new Error(`No commits found ${owner}/${repo}`);  //TODO: check if this is the correct error message
-    } 
-  }
-  catch(err) {
+      throw new Error(`No commits found ${owner}/${repo}`); //TODO: check if this is the correct error message
+    }
+  } catch (err) {
     throw new Error(`Could not find any commits for ${owner}/${repo}`); //TODO: check if this is the correct error message
   }
 }
@@ -62,11 +63,14 @@ async function fetchRepoTopics(octokit, owner, repo) {
 async function fetchFirstReleaseDate(octokit, owner, repo) {
   console.log(`Fetching first release date for repository: ${owner}/${repo}`);
   try {
-    const response = await octokit.request('GET /repos/{owner}/{repo}/releases', {
-      owner,
-      repo,
-      per_page: 1,
-    });
+    const response = await octokit.request(
+      'GET /repos/{owner}/{repo}/releases',
+      {
+        owner,
+        repo,
+        per_page: 1,
+      },
+    );
     const lastPageUrl = response.headers.link?.match(
       /<([^>]+)>;\s*rel="last"/,
     )?.[1];
@@ -74,8 +78,7 @@ async function fetchFirstReleaseDate(octokit, owner, repo) {
     if (!lastPageUrl) {
       if (response.data.length > 0) {
         response.data[0].created_at;
-      } 
-      else {
+      } else {
         throw new Error(`No releases found for ${owner}/${repo}`); //TODO: check if this is the correct error message
       }
     }
@@ -83,12 +86,10 @@ async function fetchFirstReleaseDate(octokit, owner, repo) {
     const lastPageResponse = await octokit.request(lastPageUrl);
     if (lastPageResponse.data.length > 0) {
       return Date.parse(lastPageResponse.data[0].created_at);
-    }
-    else {
+    } else {
       throw new Error(`No releases found for ${owner}/${repo}`); //TODO: check if this is the correct error message
     }
-  }
-  catch(err) {
+  } catch (err) {
     console.error('Error occured');
     throw new Error(`Unable to get releases for ${owner}/${repo}`); //TODO: check if this is the correct error message
   }
@@ -102,17 +103,15 @@ export async function processRepository(octokit, owner, repo) {
   let firstReleaseDate;
   try {
     firstReleaseDate = await fetchFirstReleaseDate(octokit, owner, repo);
-  }
-  catch(err) {
-    throw new Error(`Unable to get releases for ${owner}/${repo}`);  
+  } catch (err) {
+    throw new Error(`Unable to get releases for ${owner}/${repo}`);
   }
   const repoTopics = await fetchRepoTopics(octokit, owner, repo);
 
   let firstCommitDate;
   try {
     firstCommitDate = await fetchFirstCommitDate(octokit, owner, repo);
-  }
-  catch(err) {
+  } catch (err) {
     throw new Error(`Error trying to find first commit for ${owner}/${repo}`);
   }
   console.log({ firstReleaseDate });
@@ -120,11 +119,11 @@ export async function processRepository(octokit, owner, repo) {
   if (firstReleaseDate === null) {
     console.log(`First release date: of ${githubRepoURL} unknown`);
   }
-  
+
   if (firstCommitDate === null) {
     console.log(`First commit date: of ${githubRepoURL} unknown`);
   }
-  
+
   const singleRowData = {
     repository: `${owner}/${repo}`,
     repoTopics: `"${repoTopics.join(', ')}"`,
@@ -166,9 +165,7 @@ async function main(token, topic, numRepos) {
       }
     }
   }
-
-};
-
+}
 
 export function runMain() {
   const { token, topic, numRepos } = getInput();
