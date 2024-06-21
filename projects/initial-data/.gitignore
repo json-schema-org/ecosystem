@@ -144,3 +144,6 @@ dist
 # intellij idea
 .idea/
 # End of https://www.toptal.com/developers/gitignore/api/node
+
+# Don't commit .env!!
+.env
