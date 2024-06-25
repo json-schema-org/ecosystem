@@ -34,7 +34,7 @@ async function fetchFirstCommitDate(octokit, owner, repo) {
       if (response.data.length > 0) {
         response.data[0].commit.author.date;
       } else {
-        throw new Error(`No commits found for ${owner}/${repo}`); //TODO: check if this is the correct error message
+        throw new Error(`No commits found for ${owner}/${repo}`);
       }
     }
 
@@ -43,11 +43,10 @@ async function fetchFirstCommitDate(octokit, owner, repo) {
     if (lastPageResponse.data.length > 0) {
       return Date.parse(lastPageResponse.data[0].commit.author.date);
     } else {
-      console.error('Error occured');
-      throw new Error(`No commits found ${owner}/${repo}`); //TODO: check if this is the correct error message
+      throw new Error(`No commits found ${owner}/${repo}`);
     }
   } catch (err) {
-    throw new Error(`Could not find any commits for ${owner}/${repo}`); //TODO: check if this is the correct error message
+    throw new Error(`Could not find any commits for ${owner}/${repo}`);
   }
 }
 
@@ -79,7 +78,7 @@ async function fetchFirstReleaseDate(octokit, owner, repo) {
       if (response.data.length > 0) {
         response.data[0].created_at;
       } else {
-        throw new Error(`No releases found for ${owner}/${repo}`); //TODO: check if this is the correct error message
+        throw new Error(`No releases found for ${owner}/${repo}`);
       }
     }
 
@@ -87,11 +86,10 @@ async function fetchFirstReleaseDate(octokit, owner, repo) {
     if (lastPageResponse.data.length > 0) {
       return Date.parse(lastPageResponse.data[0].created_at);
     } else {
-      throw new Error(`No releases found for ${owner}/${repo}`); //TODO: check if this is the correct error message
+      throw new Error(`No releases found for ${owner}/${repo}`);
     }
   } catch (err) {
-    console.error('Error occured');
-    throw new Error(`Unable to get releases for ${owner}/${repo}`); //TODO: check if this is the correct error message
+    throw new Error(`Unable to get releases for ${owner}/${repo}`);
   }
 }
 
