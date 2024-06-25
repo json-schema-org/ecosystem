@@ -1,23 +1,20 @@
 import fs from 'fs';
 
 export class DataRecorder {
-  constructor(fileName) {
+  constructor(fileName, columns = []) {
     this.fileName = fileName;
+    this.columns = columns;
     this.#createFile();
   }
 
   #createFile() {
     if (!fs.existsSync(this.fileName)) {
-      fs.writeFileSync(
-        this.fileName,
-        'repo,repo_topics,date_first_commit,creation,date_first_release\n',
-        'utf8',
-      );
+      const headerLine = `${this.columns.join(',')}\n`;
+      fs.writeFileSync(this.fileName, headerLine, 'utf8');
     }
   }
 
   appendToCSV(data) {
-    console.log(`Appending data to CSV: ${data}`);
     const csvLine = `${data.join(',')}\n`;
     fs.appendFileSync(this.fileName, csvLine, 'utf8');
   }

@@ -144,7 +144,14 @@ async function main(token, topic, numRepos) {
   });
   let processedRepos = 0;
 
-  const dataRecorder = new DataRecorder(`./data/${CSV_FILE_NAME}`);
+  const csvColumns = [
+    'repo',
+    'repo_topics',
+    'date_first_commit',
+    'creation',
+    'date_first_release',
+  ];
+  const dataRecorder = new DataRecorder(`./data/${CSV_FILE_NAME}`, csvColumns);
 
   for await (const iteration of iterator) {
     const data = iteration.data;
